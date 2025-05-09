@@ -78,7 +78,7 @@ const CheckoutForm = ({ amount }: { amount: number }) => {
       elements,
       clientSecret,
       confirmParams: {
-        return_url: "http://localhost:3000/payment-success",
+        return_url: "https://test123te.netlify.app/payment-success",
         payment_method_data: {
           billing_details: {
             name: `${formData.firstName} ${formData.lastName}`,
