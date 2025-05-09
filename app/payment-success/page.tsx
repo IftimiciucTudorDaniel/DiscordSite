@@ -1,18 +1,35 @@
-export default function PaymentSuccess({
-  searchParams: { amount },
-}: {
-  searchParams: { amount: string };
-}) {
-  return (
-    <main className="max-w-6xl mx-auto p-10 text-white text-center border m-10 rounded-md bg-gradient-to-tr from-blue-500 to-purple-500">
-      <div className="mb-10">
-        <h1 className="text-4xl font-extrabold mb-2">Thank you!</h1>
-        <h2 className="text-2xl">You successfully sent</h2>
+'use client';
 
-        <div className="bg-white p-2 rounded-md text-purple-500 mt-5 text-4xl font-bold">
-          ${amount}
-        </div>
+import { useEffect, useState } from 'react';
+
+export default function PaymentSuccessPage() {
+  const [invite, setInvite] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchInvite = async () => {
+      const res = await fetch('/api/create-invite');
+      const data = await res.json();
+
+      if (data.invite) {
+        setInvite(data.invite);
+      } else {
+        setInvite('Eroare la generarea invitației.');
+      }
+    };
+
+    fetchInvite();
+  }, []);
+
+  return (
+      <div style={{ padding: 40 }}>
+        <h1>Plată realizată cu succes!</h1>
+        {invite ? (
+            <p>
+              Invită-te pe serverul nostru: <a href={invite} target="_blank" rel="noopener noreferrer">{invite}</a>
+            </p>
+        ) : (
+            <p>Se generează invitația...</p>
+        )}
       </div>
-    </main>
   );
 }
