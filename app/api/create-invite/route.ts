@@ -1,31 +1,28 @@
-import { NextResponse } from 'next/server';
+// app/api/create-invite/route.ts
 
 export async function GET() {
     const token = process.env.DISCORD_BOT_TOKEN;
     const channelId = process.env.DISCORD_CHANNEL_ID;
 
-    if (!token || !channelId) {
-        return NextResponse.json({ error: 'Missing token or channel ID' }, { status: 500 });
-    }
-
     const res = await fetch(`https://discord.com/api/v10/channels/${channelId}/invites`, {
-        method: 'POST',
+        method: "POST",
         headers: {
-            Authorization: `Bot ${token}`,
-            'Content-Type': 'application/json',
+            "Authorization": `Bot ${token}`,
+            "Content-Type": "application/json"
         },
         body: JSON.stringify({
             max_uses: 1,
-            unique: true,
-            max_age: 86400, // valid 24h
-        }),
+            max_age: 86400,
+            unique: true
+        })
     });
 
     const data = await res.json();
 
     if (!res.ok) {
-        return NextResponse.json({ error: data.message || 'Invite creation failed' }, { status: res.status });
+        console.error("DISCORD INVITE ERROR:", data);
+        return Response.json({ error: data }, { status: 500 });
     }
 
-    return NextResponse.json({ invite: `https://discord.gg/${data.code}` });
+    return Response.json({ invite: `https://discord.gg/${data.code}` });
 }
