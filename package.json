@@ -12,6 +12,7 @@
     "@stripe/react-stripe-js": "^2.9.0",
     "@stripe/stripe-js": "^3.5.0",
     "anchor-pki": "^0.3.2",
+    "bootstrap": "^5.3.6",
     "framer-motion": "^12.10.4",
     "next": "^14.2.4",
     "react": "^18",
