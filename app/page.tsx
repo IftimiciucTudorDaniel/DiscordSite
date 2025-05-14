@@ -92,7 +92,7 @@ export default function Home() {
                                 <div className="container">
                                     <div className="slider-text text-center">
                                         <h3 className="slide-title">
-                                            <span>Secure</span> and <span>Easy Way</span><br/> To Bitcoin</h3>
+                                            <span>Secure</span> and <span>Easy Waya</span><br/> To Bitcoin</h3>
                                         <p>
                                             <Link href="/about" className="slider btn btn-primary">Learn more</Link>
                                         </p>
@@ -117,12 +117,12 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <div  className="left carousel-control" href="#main-slide" data-slide="prev">
+                    <a  className="left carousel-control" href="#main-slide" data-slide="prev">
                         <span><i className="fa fa-angle-left"></i></span>
-                    </div >
-                    <div  className="right carousel-control" href="#main-slide" data-slide="next">
+                    </a >
+                    <a  className="right carousel-control" href="#main-slide" data-slide="next">
                         <span><i className="fa fa-angle-right"></i></span>
-                    </div >
+                    </a >
                 </div>
                 <section className="features">
                     <div className="container">
