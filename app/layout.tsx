@@ -8,8 +8,7 @@ import '../public/css/select2.min.css';
 import '../public/css/style.css';
 import '../public/css/skins/orange.css';
 export const metadata = {
-  title: 'Bayya Template',
-  description: 'Bitcoin Crypto Currency Template',
+  title: 'World Market Academy',
 };
 
 export default function RootLayout({

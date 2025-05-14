@@ -35,7 +35,7 @@ const PricingCard = ({ plan, onClick }) => {
             {/* ORDER NOW Button (trigger Stripe Checkout) */}
             <div className="mt-6">
                 <button
-                    onClick={() => onClick(plan.price)}
+                    onClick={() => onClick(plan)} // NU doar plan.price
                     className="w-full py-2 bg-[#fd961a] hover:bg-[#fd961a] text-white font-semibold transition"
                 >
                     ORDER NOW
