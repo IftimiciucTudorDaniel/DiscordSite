@@ -28,6 +28,7 @@ const CheckoutForm = ({ amount }: { amount: number }) => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    setErrorMessage(undefined);
   };
 
   useEffect(() => {

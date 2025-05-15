@@ -355,38 +355,38 @@ export default function Home() {
                                     </ul>
                                 </div>
                             </div>
-                            <div className="col-sm-12 col-md-5">
-                                <div className="facts-footer">
-                                    <div>
-                                        <h5>$198.76B</h5>
-                                        <span>Market cap</span>
-                                    </div>
-                                    <div>
-                                        <h5>243K</h5>
-                                        <span>daily transactions</span>
-                                    </div>
-                                    <div>
-                                        <h5>369K</h5>
-                                        <span>active accounts</span>
-                                    </div>
-                                    <div>
-                                        <h5>127</h5>
-                                        <span>supported countries</span>
-                                    </div>
-                                </div>
-                                <hr/>
-                                <div className="payment-logos">
-                                    <h4 className="payment-title">supported payment methods</h4>
-                                    <Image src="/images/icons/payment/american-express.png" alt="american-express"
-                                           width={48} height={30}/>
-                                    <Image src="/images/icons/payment/mastercard.png" alt="mastercard" width={48}
-                                           height={30}/>
-                                    <Image src="/images/icons/payment/visa.png" alt="visa" width={48} height={30}/>
-                                    <Image src="/images/icons/payment/paypal.png" alt="paypal" width={48} height={30}/>
-                                    <Image className="last" src="/images/icons/payment/maestro.png" alt="maestro"
-                                           width={48} height={30}/>
-                                </div>
-                            </div>
+                            {/*<div className="col-sm-12 col-md-5">*/}
+                            {/*    <div className="facts-footer">*/}
+                            {/*        <div>*/}
+                            {/*            <h5>$198.76B</h5>*/}
+                            {/*            <span>Market cap</span>*/}
+                            {/*        </div>*/}
+                            {/*        <div>*/}
+                            {/*            <h5>243K</h5>*/}
+                            {/*            <span>daily transactions</span>*/}
+                            {/*        </div>*/}
+                            {/*        <div>*/}
+                            {/*            <h5>369K</h5>*/}
+                            {/*            <span>active accounts</span>*/}
+                            {/*        </div>*/}
+                            {/*        <div>*/}
+                            {/*            <h5>127</h5>*/}
+                            {/*            <span>supported countries</span>*/}
+                            {/*        </div>*/}
+                            {/*    </div>*/}
+                            {/*    <hr/>*/}
+                            {/*    <div className="payment-logos">*/}
+                            {/*        <h4 className="payment-title">supported payment methods</h4>*/}
+                            {/*        <Image src="/images/icons/payment/american-express.png" alt="american-express"*/}
+                            {/*               width={48} height={30}/>*/}
+                            {/*        <Image src="/images/icons/payment/mastercard.png" alt="mastercard" width={48}*/}
+                            {/*               height={30}/>*/}
+                            {/*        <Image src="/images/icons/payment/visa.png" alt="visa" width={48} height={30}/>*/}
+                            {/*        <Image src="/images/icons/payment/paypal.png" alt="paypal" width={48} height={30}/>*/}
+                            {/*        <Image className="last" src="/images/icons/payment/maestro.png" alt="maestro"*/}
+                            {/*               width={48} height={30}/>*/}
+                            {/*    </div>*/}
+                            {/*</div>*/}
                         </div>
                     </div>
                 </div>
