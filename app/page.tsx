@@ -67,94 +67,105 @@ export default function Home() {
     return (
         <>
             <div className="wrapper">
-                <header className="header">
-                    <div className="container">
-                        <div className="row">
-                            {/* Logo Starts */}
-                            <div className="main-logo col-xs-12 col-md-3 col-md-2 col-lg-2 hidden-xs">
-                                <Link href="/">
-                                    <Image src="/images/fulllogo.png" alt="logo" className="img-responsive" width={200}
-                                           height={50}/>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </header>
-                <div id="main-slide" className="carousel slide carousel-fade" data-ride="carousel">
-                    <ol className="carousel-indicators visible-lg visible-md">
-                        <li data-target="" data-slide-to="0" className="active"></li>
-                        <li data-target="" data-slide-to="1"></li>
-                        <li data-target="" data-slide-to="2"></li>
-                    </ol>
                     <div className="carousel-inner">
-                        <div className="item active bg-parallax item-1">
+                        <div className="item active bg-parallax item-1" style={{ position: "relative" }}>
+                            {/*<div style={{*/}
+                            {/*    position: "absolute",*/}
+                            {/*    top: "20px",*/}
+                            {/*    left: "20px",*/}
+                            {/*    zIndex: 10*/}
+                            {/*}}>*/}
+                            {/*    <Link href="/">*/}
+                            {/*        <Image*/}
+                            {/*            src="/images/fulllogo.png"*/}
+                            {/*            alt="logo"*/}
+                            {/*            className="img-responsive"*/}
+                            {/*            width={200}*/}
+                            {/*            height={50}*/}
+                            {/*        />*/}
+                            {/*    </Link>*/}
+                            {/*</div>*/}
+
                             <div className="slider-content">
+                                <img
+                                    src="/images/fulllogo_nobuffer.jpg"
+                                    alt="Slide 1"
+                                    style={{
+                                        width: "100%",
+                                        height: "70vh",
+                                        objectFit: "cover"
+                                    }}
+                                />
+
                                 <div className="container">
+
                                     <div className="slider-text text-center">
-                                        <h3 className="slide-title">
-                                            <span>Secure</span> and <span>Easy Waya</span><br/> To Bitcoin</h3>
-                                        <p>
-                                            <Link href="/about" className="slider btn btn-primary">Learn more</Link>
-                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="item bg-parallax item-2">
-                            <div className="slider-content">
-                                <div className="col-md-12">
-                                    <div className="container">
-                                        <div className="slider-text text-center">
-                                            <h3 className="slide-title"><span>Bitcoin</span> Exchange <br/>You
-                                                can <span>Trust</span></h3>
-                                            <p>
-                                                <Link href="/pricing" className="slider btn btn-primary">our
-                                                    prices</Link>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {/*<div className="item bg-parallax item-2">*/}
+                        {/*    <div className="slider-content">*/}
+                        {/*        <div className="col-md-12">*/}
+                        {/*            <div className="container">*/}
+                        {/*                <Image*/}
+                        {/*                    src="/images/banner1.png"*/}
+                        {/*                    alt="Slide 1"*/}
+                        {/*                    width={770}*/}
+                        {/*                    height={570}*/}
+                        {/*                    className="img-responsive"*/}
+                        {/*                />*/}
+                        {/*                <div className="slider-text text-center">*/}
+                        {/*                    <h3 className="slide-title"><span>Bitcoin</span> Exchange <br/>You*/}
+                        {/*                        can <span>Trust</span></h3>*/}
+                        {/*                    <p>*/}
+                        {/*                        <Link href="/pricing" className="slider btn btn-primary">our*/}
+                        {/*                            prices</Link>*/}
+                        {/*                    </p>*/}
+                        {/*                </div>*/}
+                        {/*            </div>*/}
+                        {/*        </div>*/}
+                        {/*    </div>*/}
+                        {/*</div>*/}
                     </div>
-                    <a  className="left carousel-control" href="#main-slide" data-slide="prev">
-                        <span><i className="fa fa-angle-left"></i></span>
-                    </a >
-                    <a  className="right carousel-control" href="#main-slide" data-slide="next">
-                        <span><i className="fa fa-angle-right"></i></span>
-                    </a >
-                </div>
+                    {/*<a  className="left carousel-control" href="#main-slide" data-slide="prev">*/}
+                    {/*    <span><i className="fa fa-angle-left"></i></span>*/}
+                    {/*</a >*/}
+                    {/*<a  className="right carousel-control" href="#main-slide" data-slide="next">*/}
+                    {/*    <span><i className="fa fa-angle-right"></i></span>*/}
+                    {/*</a >*/}
+
                 <section className="features">
                     <div className="container">
                         <div className="row features-row">
                             <div className="feature-box col-md-4 col-sm-12">
                             <span className="feature-icon">
-                                <Image src="/images/icons/orange/download-bitcoin.png" alt="download bitcoin" width={60}
+                                <Image src="/images/icons/orange/buy-sell4.jpg" alt="" width={60}
                                        height={60}/>
                             </span>
                                 <div className="feature-box-content">
-                                    <h3>Download Bitcoin Wallet</h3>
-                                    <p>Get it on PC or Mobile to create, send and receive bitcoins.</p>
+                                    <h3>Foundation in Investing</h3>
+                                    <p>Learn the core principles of investing and how to approach different market opportunities.</p>
                                 </div>
                             </div>
                             <div className="feature-box two col-md-4 col-sm-12">
                             <span className="feature-icon">
-                                <Image src="/images/icons/orange/add-bitcoins.png" alt="add bitcoins" width={60}
+                                <Image src="/images/icons/orange/buy-sell2.jpg" alt="" width={60}
                                        height={60}/>
                             </span>
                                 <div className="feature-box-content">
-                                    <h3>Add coins to your Wallet</h3>
-                                    <p>Add bitcoins you’ve created or exchanged via credit card.</p>
+                                    <h3>Strategic Planning</h3>
+                                    <p>Develop robust strategies for building and managing your portfolio effectively.</p>
                                 </div>
                             </div>
                             <div className="feature-box three col-md-4 col-sm-12">
-                            <span className="feature-icon">
-                                <Image src="/images/icons/orange/buy-sell-bitcoins.png" alt="buy and sell bitcoins"
-                                       width={60} height={60}/>
-                            </span>
+                                <span className="feature-icon">
+                                    <Image src="/images/icons/orange/buy-sell1.jpg" alt=""
+                                           width={60} height={60}/>
+                                </span>
                                 <div className="feature-box-content">
-                                    <h3>Buy/Sell with Wallet</h3>
-                                    <p>Enter receivers address, specify the amount and send.</p>
+                                    <h3>Market Analysis & Decision Making</h3>
+                                    <p>Gain the skills to analyze market trends and make confident investment choices.</p>
                                 </div>
                             </div>
                         </div>
@@ -165,7 +176,7 @@ export default function Home() {
                         <div className="row text-center">
                             <h2 className="title-head">About <span>Us</span></h2>
                             <div className="title-head-subtitle">
-                                <p>a commercial website that lists wallets, exchanges and other bitcoin related info</p>
+                                <p>At Infinite World Market Academy, we empower aspiring investors with the knowledge, discipline, and mindset required to succeed in the financial world. Our platform blends high-quality education with real-world strategies, helping individuals gain confidence and clarity in their investment journey.</p>
                             </div>
                         </div>
                         <div className="row about-content">
@@ -174,11 +185,8 @@ export default function Home() {
                                        width={540} height={360}/>
                             </div>
                             <div className="col-sm-12 col-md-7 col-lg-6">
-                                <h3 className="title-about">WE ARE BAYYA</h3>
-                                <p className="about-text">A place for everyone who wants to simply buy and sell
-                                    Bitcoins. Deposit funds using your Visa/MasterCard or bank transfer. Instant
-                                    buy/sell of Bitcoins at fair price is guaranteed. Nothing extra. Join over 700,000
-                                    users from all over the world satisfied with our services.</p>
+                                <h3 className="title-about">WE ARE Infinite World Market Academy</h3>
+                                <p className="about-text">Infinite World Market Academy is a trusted learning hub for those looking to master the art of investing. We provide a strong educational foundation through practical, guided courses designed to build both competence and confidence. Whether you're just starting out or looking to refine your financial strategies, our academy supports your growth every step of the way — with patience, precision, and purpose.</p>
                                 <ul className="nav nav-tabs text-3xl text-white font-bold">
                                     <li className="active"><a data-toggle="tab" href="#menu1">Our Mission </a></li>
                                     <li><a data-toggle="tab" href="#menu2"> Our advantages </a></li>
@@ -186,22 +194,27 @@ export default function Home() {
                                 </ul>
                                 <div className="tab-content">
                                     <div id="menu1" className="tab-pane fade in active">
-                                        <p>Bitcoin is based on a protocol known as the blockchain, which allows to
-                                            create, transfer and verify ultra-secure financial data without interference
-                                            of third parties.</p>
+                                        <p>To deliver comprehensive, accessible, and transformative financial education that equips individuals with the knowledge and confidence to invest wisely and grow sustainably. We are committed to fostering long-term success through patience-driven learning and strategic empowerment.
+                                        </p>
                                     </div>
                                     <div id="menu2" className="tab-pane fade text-5xl text-white font-bold">
-                                        <p>Our mission as an official partner of Bitcoin Foundation is to help you enter
-                                            and better understand the world of #1 cryptocurrency and avoid any issues
-                                            you may encounter.</p>
+                                        <p>🎓 Expert-led Courses – Learn directly from industry professionals with real-world experience.
+
+                                            <br/>🧭 Structured Guidance – Clear learning paths designed to support beginners and intermediate investors alike.
+
+                                            <br/>🌍 Community & Support – Access to a vibrant network of learners, mentors, and support staff.
+
+                                            <br/>🔄 Lifelong Learning – Continuous updates and resources to help you adapt in a dynamic financial landscape.
+
+                                            <br/>📈 Practical Outcomes – Knowledge you can apply immediately to real investment scenarios.</p>
                                     </div>
                                     <div id="menu3" className="tab-pane fade">
-                                        <p>We are here because we are passionate about open, transparent markets and aim
-                                            to be a major driving force in widespread adoption, we are the first and the
-                                            best in cryptocurrency. </p>
+                                        <p>Clarity – All concepts are taught with simplicity and purpose, ensuring no learner is left behind.
+                                            <br/>Quality Education – We stand by the integrity and accuracy of every course we offer.
+                                            <br/>Progress Tracking – Your learning path is tracked and adapted to your pace and growth.
+                                            <br/>Satisfaction First – If you’re not satisfied with your learning experience, we offer support and flexible options to make it right. </p>
                                     </div>
                                 </div>
-                                <Link className="btn btn-primary" href="/about">Read More</Link>
                             </div>
                         </div>
                     </div>
@@ -244,105 +257,40 @@ export default function Home() {
                     </motion.div>
                 )}
 
-                <section className="image-block">
+                <section className="image-block centered-columns">
                     <div className="container-fluid">
-                        <div className="row">
-                            <div className="col-md-8 ts-padding img-block-left">
-                                <div className="gap-20"></div>
-                                <div className="row">
-                                    <div className="col-sm-6 col-md-6 col-xs-12">
-                                        <div className="feature text-center">
-                                        <span className="feature-icon">
-                                            <Image src="/images/icons/orange/strong-security.png" alt="strong security"
-                                                   width={60} height={60}/>
-                                        </span>
-                                            <h3 className="feature-title">Strong Security</h3>
-                                            <p>Protection against DDoS attacks, <br/>full data encryption</p>
-                                        </div>
-                                    </div>
-                                    <div className="gap-20-mobile"></div>
-                                    <div className="col-sm-6 col-md-6 col-xs-12">
-                                        <div className="feature text-center">
-                                        <span className="feature-icon">
-                                            <Image src="/images/icons/orange/world-coverage.png" alt="world coverage"
-                                                   width={60} height={60}/>
-                                        </span>
-                                            <h3 className="feature-title">World Coverage</h3>
-                                            <p>Providing services in 99% countries<br/> around all the globe</p>
-                                        </div>
-                                    </div>
+                        <div className="row justify-content-center">
+                            <div className="col-md-6 column-left">
+                                <div className="feature text-center m-16">
+                                    <h3 className="feature-title">World Coverage</h3>
+                                    <p>We proudly provide our services in 99% of countries around the globe, <br/>making our comprehensive education accessible to a vast international audience.</p>
                                 </div>
-                                <div className="gap-20"></div>
-                                <div className="row">
-                                    <div className="col-sm-6 col-md-6 col-xs-12">
-                                        <div className="feature text-center">
-                                        <span className="feature-icon">
-                                            <Image src="/images/icons/orange/payment-options.png" alt="payment options"
-                                                   width={60} height={60}/>
-                                        </span>
-                                            <h3 className="feature-title">Payment Options</h3>
-                                            <p>Popular methods: Visa, MasterCard, <br/>bank transfer, cryptocurrency</p>
-                                        </div>
-                                    </div>
-                                    <div className="gap-20-mobile"></div>
-                                    <div className="col-sm-6 col-md-6 col-xs-12">
-                                        <div className="feature text-center">
-                                        <span className="feature-icon">
-                                            <Image src="/images/icons/orange/mobile-app.png" alt="mobile app" width={60}
-                                                   height={60}/>
-                                        </span>
-                                            <h3 className="feature-title">Mobile App</h3>
-                                            <p>Trading via our Mobile App, Available<br/> in Play Store & App Store</p>
-                                        </div>
-                                    </div>
+                                <div className="feature text-center m-16">
+
+                                    <h3 className="feature-title">Flexible Payment Options</h3>
+                                    <p>We offer popular methods like Visa, MasterCard, and bank transfers for your convenience,<br/> ensuring easy access to our programs.</p>
                                 </div>
-                                <div className="gap-20"></div>
-                                <div className="row">
-                                    <div className="col-sm-6 col-md-6 col-xs-12">
-                                        <div className="feature text-center">
-                                        <span className="feature-icon">
-                                            <Image src="/images/icons/orange/cost-efficiency.png" alt="cost efficiency"
-                                                   width={60} height={60}/>
-                                        </span>
-                                            <h3 className="feature-title">Cost efficiency</h3>
-                                            <p>Reasonable trading fees for takers<br/> and all market makers</p>
-                                        </div>
-                                    </div>
-                                    <div className="gap-20-mobile"></div>
-                                    <div className="col-sm-6 col-md-6 col-xs-12">
-                                        <div className="feature text-center">
-                                        <span className="feature-icon">
-                                            <Image src="/images/icons/orange/high-liquidity.png" alt="high liquidity"
-                                                   width={60} height={60}/>
-                                        </span>
-                                            <h3 className="feature-title">High Liquidity</h3>
-                                            <p>Fast access to high liquidity orderbook<br/> for top currency pairs</p>
-                                        </div>
-                                    </div>
+                                <div className="feature text-center m-16">
+
+                                    <h3 className="feature-title">Empowering Community</h3>
+                                    <p>Connect with a supportive network of fellow learners.</p>
                                 </div>
                             </div>
-                            <div className="col-md-4 ts-padding bg-image-1">
-                                <div>
-                                    <div className="text-center">
-                                        <Link className="button-video mfp-youtube"
-                                              href="https://www.youtube.com/watch?v=0gv7OC9L2s8"></Link>
-                                    </div>
+                            <div className="col-md-6 column-right">
+                                <div className="feature text-center m-16">
+
+                                    <h3 className="feature-title">Expert Guidance</h3>
+                                    <p>Learn from experienced professionals and industry leaders.<br/>  and industry leaders.</p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section className="call-action-all">
-                    <div className="call-action-all-overlay">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-xs-12">
-                                    <div className="action-text">
-                                        <h2>Get Started Today With Bitcoin</h2>
-                                        <p className="lead">Open account for free and start trading Bitcoins!</p>
-                                    </div>
-                                    <p className="action-btn"><Link className="btn btn-primary" href="/register">Register
-                                        Now</Link></p>
+                                <div className="feature text-center m-16">
+
+                                    <h3 className="feature-title">Comprehensive Curriculum</h3>
+                                    <p>Master essential investment knowledge and practical skills.</p>
+                                </div>
+                                <div className="feature text-center m-16">
+
+                                    <h3 className="feature-title">Cost Efficiency</h3>
+                                    <p>We believe in reasonable fees, ensuring that top-tier financial education  <br/>attainable for all our dedicated students.</p>
                                 </div>
                             </div>
                         </div>
