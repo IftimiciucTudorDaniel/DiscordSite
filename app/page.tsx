@@ -186,7 +186,7 @@ export default function Home() {
                             </div>
                             <div className="col-sm-12 col-md-7 col-lg-6">
                                 <h3 className="title-about">WE ARE Infinite World Market Academy</h3>
-                                <p className="about-text">Infinite World Market Academy is a trusted learning hub for those looking to master the art of investing. We provide a strong educational foundation through practical, guided courses designed to build both competence and confidence. Whether you're just starting out or looking to refine your financial strategies, our academy supports your growth every step of the way — with patience, precision, and purpose.</p>
+                                <p className="about-text">Infinite World Market Academy is a trusted learning hub for those looking to master the art of investing. We provide a strong educational foundation through practical, guided courses designed to build both competence and confidence. Whether youre just starting out or looking to refine your financial strategies, our academy supports your growth every step of the way — with patience, precision, and purpose.</p>
                                 <ul className="nav nav-tabs text-3xl text-white font-bold">
                                     <li className="active"><a data-toggle="tab" href="#menu1">Our Mission </a></li>
                                     <li><a data-toggle="tab" href="#menu2"> Our advantages </a></li>
