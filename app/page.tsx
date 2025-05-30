@@ -221,15 +221,18 @@ export default function Home() {
                 </section>
 
                 <section className="facts py-5 ">
-                    <div className="container mt-10">
+                    <div className="container mx-auto max-w-[1200px]">
                         <div className="row text-center facts-content">
                             <div className="col-12 heading-facts mb-4">
                                 <h2>
                                     About<span> Platform</span>
                                 </h2>
-                                <p className="lead">
-                                    Leading cryptocurrency exchange since day one of Bitcoin distribution.
-                                </p>
+                                <p className="text-xl mt-5">
+                                    IWM Academy private network</p>
+                                <p className="mt-10 ml-20 mr-20">Welcome to the IWM Academy private network, a thriving community where ambition meets opportunity! Connect and collaborate with fellow members who are avid learners, successful entrepreneurs, and savvy investors. Experience the power of collective knowledge and innovation as you engage with individuals who are not just getting educated but mastering the art of smart business growth and investment strategies. Dive into interactive sessions, share insights, and harness the energy of a network committed to success and lifelong learning. Join us on this exciting journey and be part of a dynamic community thats transforming potential into prosperity!</p>
+
+                                <p className="mt-10 ml-20 mr-20">Unlock exclusive access to the IWM Academy by joining us through Patreon! Discover a world where learning meets limitless possibilities within our vibrant private network. As a valued member, youll enjoy a sneak peek into this exciting community, where you can seamlessly interact with passionate individuals who are on their journeys toward success.
+                                    Engage in enlightening conversations, exchange valuable insights, and witness firsthand the diverse paths of our members. With the freedom to explore various groups, youll have the opportunity to find the perfect fit for your goals, paving the way for personal and professional growth. Join us today for an inspiring experience, and be part of a network that empowers you to choose your path to greatness!</p>
                             </div>
                         </div>
                     </div>
@@ -238,6 +241,7 @@ export default function Home() {
                 <div className="mb-10">
                     <h2 className="title-head text-center">Package <span>Pricing</span></h2>
                 </div>
+
 
                 <div className="flex flex-wrap justify-center gap-8 mb-20">
                     {plans.map((plan) => (
