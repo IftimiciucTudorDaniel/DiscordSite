@@ -78,7 +78,6 @@ const PricingCard = ({ plan, onClick }) => {
                 </button>
             </div>
 
-            {/* Modal */}
             <TermsModal
                 isOpen={showModal}
                 onClose={() => {setShowModal(false); document.body.classList.remove("modal-open");}}
