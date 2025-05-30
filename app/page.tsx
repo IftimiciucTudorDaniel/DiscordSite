@@ -225,7 +225,7 @@ export default function Home() {
                         <div className="row text-center facts-content">
                             <div className="col-12 heading-facts mb-4">
                                 <h2>
-                                    About<span> Platform</span>
+                                    About<span> Platfoarm</span>
                                 </h2>
                                 <p className="text-xl mt-5">
                                     IWM Academy private network</p>
