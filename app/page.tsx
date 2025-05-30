@@ -137,7 +137,7 @@ export default function Home() {
                                 </span>
                                 <div className="feature-box-content">
                                     <h3>Company Analysis</h3>
-                                    <p>Learn to dissect financial statements and assess business models. Understand key indicators like revenue trajectories, market share expansion, and profitability, all crucial for evaluating a company's growth potential.
+                                    <p>Learn to dissect financial statements and assess business models. Understand key indicators like revenue trajectories, market share expansion, and profitability, all crucial for evaluating a companys growth potential.
                                     </p>
                                 </div>
                             </div>
@@ -256,7 +256,7 @@ export default function Home() {
                                 <div className="feature text-center m-16">
 
                                     <h3 className="feature-title">Company Analysis</h3>
-                                    <p>Learn to dissect financial statements and assess business models. Understand key indicators like revenue trajectories <br/> market share expansion, and profitability, all crucial for evaluating a company's growth potential.
+                                    <p>Learn to dissect financial statements and assess business models. Understand key indicators like revenue trajectories <br/> market share expansion, and profitability, all crucial for evaluating a companys growth potential.
                                     </p>
                                 </div>
                             </div>
