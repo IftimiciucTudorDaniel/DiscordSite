@@ -7,7 +7,7 @@ import {
   PaymentElement,
 } from "@stripe/react-stripe-js";
 
-const CheckoutForm = ({ amount }: { amount: number }) => {
+const CheckoutForm = ({ amount, priceId  }: { amount: number; priceId: string;  }) => {
   const stripe = useStripe();
   const elements = useElements();
 
@@ -123,7 +123,7 @@ const CheckoutForm = ({ amount }: { amount: number }) => {
             disabled={!stripe || loading || !clientSecret}
             className="mt-4 bg-black text-white font-semibold p-3 rounded w-full disabled:opacity-50"
         >
-          {loading ? "Processing..." : `Subscribe for Ron ${amount}`}
+          {loading ? "Processing..." : `Subscribe for ${amount}$`}
         </button>
       </form>
   );

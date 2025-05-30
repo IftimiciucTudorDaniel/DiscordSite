@@ -1,0 +1,193 @@
+/* BitcoinHome.module.css */
+
+.bitcoinHomeWrapper {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #111111;
+    position: relative;
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+}
+
+.slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+    display: block;
+    opacity: 1;
+    position: relative;
+}
+
+.sliderContent {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sliderText {
+    text-align: center;
+    color: white;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+.slideTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.slideTitle span {
+    color: #f78f1e; /* accent orange */
+}
+
+.sliderBtn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #f78f1e;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 3px;
+    box-shadow: 0 3px 8px rgba(247,143,30,0.6);
+    transition: background-color 0.3s ease;
+}
+
+.sliderBtn:hover {
+    background-color: #e26b00;
+}
+
+/* Carousel Controls */
+.leftControl,
+.rightControl {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    background: rgba(0,0,0,0.4);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+    transition: background 0.3s ease;
+}
+
+.leftControl:hover,
+.rightControl:hover {
+    background: rgba(0,0,0,0.7);
+}
+
+.leftControl {
+    left: 20px;
+}
+
+.rightControl {
+    right: 20px;
+}
+
+.arrow {
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Features Section */
+.featuresSection {
+    background: #fff;
+    padding: 60px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.featuresRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.featureBox {
+    flex: 1 1 30%;
+    min-width: 280px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    background: #fafafa;
+    transition: box-shadow 0.3s ease;
+}
+
+.featureBox:hover {
+    box-shadow: 0 0 25px rgba(247,143,30,0.5);
+}
+
+.featureIcon {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.featureBoxContent h3 {
+    font-size: 1.5rem;
+    color: #f78f1e;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.featureBoxContent p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .featuresRow {
+        flex-direction: column;
+    }
+    .featureBox {
+        min-width: auto;
+        width: 100%;
+    }
+    .slideTitle {
+        font-size: 1.8rem;
+    }
+}
+.logo {
+    position: absolute;
+    top: 0px;
+    left: 50px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.logo img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}

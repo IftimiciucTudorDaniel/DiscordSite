@@ -1,7 +1,6 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import {useEffect, useState} from "react";
-import StripeWrapper from "../components/StripeWrapper";
 import Link from "next/link";
 import Image from "next/image";
 import {Elements} from "@stripe/react-stripe-js";
@@ -12,129 +11,100 @@ import CheckoutPage from "../components/CheckoutPage";
 import PricingCard from './PricingCard';
 import Preloader from "./Preloader";
 const stripePromise = loadStripe("pk_test_51MKLiAJXJISDpaiuaphCVhzrp3hkCkHUxyuNfIPS4ZxH1hY8ZsH4ygvk7WKnRvHPc6xwfioqvdvf4PNfCeBFxfZP00qQgwToiN");
+import BitcoinHome from '../components/BitcoinHome';
 
 export default function Home() {
-    const [selectedPlan, setSelectedPlan] = useState(null);
     const [loading, setLoading] = useState(true);
-
+    const [selectedPlan, setSelectedPlan] = useState(null);
     useEffect(() => {
         const timer = setTimeout(() => setLoading(false), 2000);
         return () => clearTimeout(timer);
     }, []);
     const plans = [
         {
-            title: "Cadet",
-            subtitle: "",
-            price: 49.99,
-            features: [
-                "Access to all TRW Campuses",
-                "Daily live broadcasts",
-                "Daily course updates",
-                "5 Connected Devices",
-            ],
+            title: "Small Cap Academy",
+            prices: {
+                "1month": {
+                    price: 1560,
+                    priceId: "price_1month_smallcap",
+                },
+                "6months": {
+                    price: 8700,
+                    priceId: "price_6months_smallcap",
+                },
+                "1year": {
+                    price: 16900,
+                    priceId: "price_1year_smallcap",
+                },
+            },
+            features: ["Advanced Small Cap Strategies", "Mentorship Access"],
         },
         {
-            title: "Hero",
-            subtitle: "SAVE $120",
-            price: 39.99,
-            features: [
-                "All of Cadet",
-                "Daily Coin Bonus",
-                "Power Level Boost",
-                "7 Connected Devices",
-                "Campus Graduation Certificate",
-                "Access to TRW Job Portal Hiring Opportunities",
-            ],
+            title: "TOUGH MARKET Academy",
+            prices: {
+                "1month": {
+                    price: 1656,
+                    priceId: "price_1month_smallcap",
+                },
+                "6months": {
+                    price: 9000,
+                    priceId: "price_6months_smallcap",
+                },
+                "1year": {
+                    price: 17300,
+                    priceId: "price_1year_smallcap",
+                },
+            },
+            features: ["Advanced Small Cap Strategies", "Mentorship Access"],
         },
         {
-            title: "Champion",
-            subtitle: "SAVE $360",
-            price: 34.99,
-            features: [
-                "All of Cadet",
-                "All of Hero",
-                "Maximum Daily Coin Bonus",
-                "Big Power Level Boost",
-                "Exclusive Champion Only Chats & Lessons",
-            ],
+            title: "200k group Academy",
+            prices: {
+                "1month": {
+                    price: 1560,
+                    priceId: "price_1month_smallcap",
+                },
+                "6months": {
+                    price: 8900,
+                    priceId: "price_6months_smallcap",
+                },
+                "1year": {
+                    price: 17900,
+                    priceId: "price_1year_smallcap",
+                },
+            },
+            features: ["Advanced Small Cap Strategies", "Mentorship Access"],
         },
+        {
+            title: "EARNINGS GROUP academy",
+            prices: {
+                "1month": {
+                    price: 1290,
+                    priceId: "price_1month_smallcap",
+                },
+                "6months": {
+                    price: 7200,
+                    priceId: "price_6months_smallcap",
+                },
+                "1year": {
+                    price: 15000,
+                    priceId: "price_1year_smallcap",
+                },
+            },
+            features: ["Advanced Small Cap Strategies", "Mentorship Access"],
+        },
+
     ];
 
     if (loading) {
         return <Preloader />;
     }
 
+    // @ts-ignore
     return (
         <>
             <div className="wrapper">
-                    <div className="carousel-inner">
-                        <div className="item active bg-parallax item-1" style={{ position: "relative" }}>
-                            {/*<div style={{*/}
-                            {/*    position: "absolute",*/}
-                            {/*    top: "20px",*/}
-                            {/*    left: "20px",*/}
-                            {/*    zIndex: 10*/}
-                            {/*}}>*/}
-                            {/*    <Link href="/">*/}
-                            {/*        <Image*/}
-                            {/*            src="/images/fulllogo.png"*/}
-                            {/*            alt="logo"*/}
-                            {/*            className="img-responsive"*/}
-                            {/*            width={200}*/}
-                            {/*            height={50}*/}
-                            {/*        />*/}
-                            {/*    </Link>*/}
-                            {/*</div>*/}
-
-                            <div className="slider-content">
-                                <img
-                                    src="/images/fulllogo_nobuffer.jpg"
-                                    alt="Slide 1"
-                                    style={{
-                                        width: "100%",
-                                        height: "70vh",
-                                        objectFit: "cover"
-                                    }}
-                                />
-
-                                <div className="container">
-
-                                    <div className="slider-text text-center">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {/*<div className="item bg-parallax item-2">*/}
-                        {/*    <div className="slider-content">*/}
-                        {/*        <div className="col-md-12">*/}
-                        {/*            <div className="container">*/}
-                        {/*                <Image*/}
-                        {/*                    src="/images/banner1.png"*/}
-                        {/*                    alt="Slide 1"*/}
-                        {/*                    width={770}*/}
-                        {/*                    height={570}*/}
-                        {/*                    className="img-responsive"*/}
-                        {/*                />*/}
-                        {/*                <div className="slider-text text-center">*/}
-                        {/*                    <h3 className="slide-title"><span>Bitcoin</span> Exchange <br/>You*/}
-                        {/*                        can <span>Trust</span></h3>*/}
-                        {/*                    <p>*/}
-                        {/*                        <Link href="/pricing" className="slider btn btn-primary">our*/}
-                        {/*                            prices</Link>*/}
-                        {/*                    </p>*/}
-                        {/*                </div>*/}
-                        {/*            </div>*/}
-                        {/*        </div>*/}
-                        {/*    </div>*/}
-                        {/*</div>*/}
-                    </div>
-                    {/*<a  className="left carousel-control" href="#main-slide" data-slide="prev">*/}
-                    {/*    <span><i className="fa fa-angle-left"></i></span>*/}
-                    {/*</a >*/}
-                    {/*<a  className="right carousel-control" href="#main-slide" data-slide="next">*/}
-                    {/*    <span><i className="fa fa-angle-right"></i></span>*/}
-                    {/*</a >*/}
-
+                    <main><BitcoinHome/></main>
                 <section className="features">
                     <div className="container">
                         <div className="row features-row">
@@ -144,8 +114,9 @@ export default function Home() {
                                        height={60}/>
                             </span>
                                 <div className="feature-box-content">
-                                    <h3>Foundation in Investing</h3>
-                                    <p>Learn the core principles of investing and how to approach different market opportunities.</p>
+                                    <h3>Foundational Knowledge</h3>
+                                    <p> Begin with a deep dive into market fundamentals, exploring the intricacies of capital allocation in growth sectors. Gain insights into what distinguishes high-potential businesses.
+                                    </p>
                                 </div>
                             </div>
                             <div className="feature-box two col-md-4 col-sm-12">
@@ -154,8 +125,9 @@ export default function Home() {
                                        height={60}/>
                             </span>
                                 <div className="feature-box-content">
-                                    <h3>Strategic Planning</h3>
-                                    <p>Develop robust strategies for building and managing your portfolio effectively.</p>
+                                    <h3>Strategic Insights</h3>
+                                    <p>At the Academy, experts reveal secrets behind identifying rapidly expanding industries, guiding learners to recognize lucrative investment opportunities in sectors like technology, biotech, and green energy.
+                                    </p>
                                 </div>
                             </div>
                             <div className="feature-box three col-md-4 col-sm-12">
@@ -164,8 +136,9 @@ export default function Home() {
                                            width={60} height={60}/>
                                 </span>
                                 <div className="feature-box-content">
-                                    <h3>Market Analysis & Decision Making</h3>
-                                    <p>Gain the skills to analyze market trends and make confident investment choices.</p>
+                                    <h3>Company Analysis</h3>
+                                    <p>Learn to dissect financial statements and assess business models. Understand key indicators like revenue trajectories, market share expansion, and profitability, all crucial for evaluating a company's growth potential.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -173,10 +146,11 @@ export default function Home() {
                 </section>
                 <section className="about-us">
                     <div className="container">
-                        <div className="row text-center">
+                        <div className="row text-center mb-10">
                             <h2 className="title-head">About <span>Us</span></h2>
                             <div className="title-head-subtitle">
-                                <p>At Infinite World Market Academy, we empower aspiring investors with the knowledge, discipline, and mindset required to succeed in the financial world. Our platform blends high-quality education with real-world strategies, helping individuals gain confidence and clarity in their investment journey.</p>
+                                <p>Infinite World Markets Academy provides a comprehensive, insightful pathway for mastering the art of business growth investing. Learn to navigate this dynamic field the right way with these focused steps:
+                                </p>
                             </div>
                         </div>
                         <div className="row about-content">
@@ -219,28 +193,28 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
-                <div className="flex flex-wrap justify-center gap-6 mb-20">
-                    {plans.map((plan, index) => (
-                        <PricingCard
-                            key={index}
-                            plan={plan}
-                            onClick={() => setSelectedPlan(plan)}
-                        />
+
+                <div className="mb-10">
+                    <h2 className="title-head text-center">Packege <span>Pricing</span></h2>
+                </div>
+
+                <div className="flex flex-wrap justify-center gap-8 mb-20">
+                    {plans.map((plan) => (
+                        <PricingCard key={plan.title} plan={plan} onClick={setSelectedPlan} />
                     ))}
                 </div>
 
-                {/* CHECKOUT (separat de gridul de planuri) */}
                 {selectedPlan && (
                     <motion.div
                         id="checkout"
-                        className="w-full max-w-2xl mx-auto mt-12 bg-gray-800 border border-gray-700 p-8 rounded-xl shadow-xl"
+                        className="w-full max-w-2xl mx-auto mt-12 bg-[#1D1D1D] border border-[#1D1D1D] p-8 rounded-xl shadow-xl"
                         initial={{opacity: 0, y: 30, scale: 0.95}}
                         animate={{opacity: 1, y: 0, scale: 1}}
                         exit={{opacity: 0, y: 30, scale: 0.95}}
                         transition={{duration: 0.5, ease: "easeOut"}}
                     >
                         <h2 className="text-2xl text-[white] font-bold mb-6 text-center">
-                            Complete your subscription for{" "}
+                            Complete your subscription for
                             <span className="text-purple-400">{selectedPlan.title}</span>
                         </h2>
 
@@ -252,28 +226,38 @@ export default function Home() {
                                 currency: "ron",
                             }}
                         >
-                            <CheckoutForm amount={selectedPlan.price}/>
+                            <CheckoutForm
+                                priceId={selectedPlan.priceId}
+                                amount={selectedPlan.price}
+                            />
                         </Elements>
                     </motion.div>
                 )}
+
+                <div className="mb-10">
+                    <h2 className="title-head text-center">More <span>Informations</span></h2>
+                </div>
 
                 <section className="image-block centered-columns">
                     <div className="container-fluid">
                         <div className="row justify-content-center">
                             <div className="col-md-6 column-left">
                                 <div className="feature text-center m-16">
-                                    <h3 className="feature-title">World Coverage</h3>
-                                    <p>We proudly provide our services in 99% of countries around the globe, <br/>making our comprehensive education accessible to a vast international audience.</p>
+                                    <h3 className="feature-title">Foundational Knowledge</h3>
+                                    <p>Begin with a deep dive into market fundamentals, exploring the intricacies of capital allocation in growth sectors.  <br/>Gain insights into what distinguishes high-potential businesses.
+                                    </p>
                                 </div>
                                 <div className="feature text-center m-16">
 
-                                    <h3 className="feature-title">Flexible Payment Options</h3>
-                                    <p>We offer popular methods like Visa, MasterCard, and bank transfers for your convenience,<br/> ensuring easy access to our programs.</p>
+                                    <h3 className="feature-title">Strategic Insights</h3>
+                                    <p>At the Academy, experts reveal secrets behind identifying rapidly expanding industries,<br/> guiding learners to recognize lucrative investment opportunities in sectors like technology, biotech, and green energy.
+                                    </p>
                                 </div>
                                 <div className="feature text-center m-16">
 
-                                    <h3 className="feature-title">Empowering Community</h3>
-                                    <p>Connect with a supportive network of fellow learners.</p>
+                                    <h3 className="feature-title">Company Analysis</h3>
+                                    <p>Learn to dissect financial statements and assess business models. Understand key indicators like revenue trajectories <br/> market share expansion, and profitability, all crucial for evaluating a company's growth potential.
+                                    </p>
                                 </div>
                             </div>
                             <div className="col-md-6 column-right">
@@ -355,38 +339,6 @@ export default function Home() {
                                     </ul>
                                 </div>
                             </div>
-                            {/*<div className="col-sm-12 col-md-5">*/}
-                            {/*    <div className="facts-footer">*/}
-                            {/*        <div>*/}
-                            {/*            <h5>$198.76B</h5>*/}
-                            {/*            <span>Market cap</span>*/}
-                            {/*        </div>*/}
-                            {/*        <div>*/}
-                            {/*            <h5>243K</h5>*/}
-                            {/*            <span>daily transactions</span>*/}
-                            {/*        </div>*/}
-                            {/*        <div>*/}
-                            {/*            <h5>369K</h5>*/}
-                            {/*            <span>active accounts</span>*/}
-                            {/*        </div>*/}
-                            {/*        <div>*/}
-                            {/*            <h5>127</h5>*/}
-                            {/*            <span>supported countries</span>*/}
-                            {/*        </div>*/}
-                            {/*    </div>*/}
-                            {/*    <hr/>*/}
-                            {/*    <div className="payment-logos">*/}
-                            {/*        <h4 className="payment-title">supported payment methods</h4>*/}
-                            {/*        <Image src="/images/icons/payment/american-express.png" alt="american-express"*/}
-                            {/*               width={48} height={30}/>*/}
-                            {/*        <Image src="/images/icons/payment/mastercard.png" alt="mastercard" width={48}*/}
-                            {/*               height={30}/>*/}
-                            {/*        <Image src="/images/icons/payment/visa.png" alt="visa" width={48} height={30}/>*/}
-                            {/*        <Image src="/images/icons/payment/paypal.png" alt="paypal" width={48} height={30}/>*/}
-                            {/*        <Image className="last" src="/images/icons/payment/maestro.png" alt="maestro"*/}
-                            {/*               width={48} height={30}/>*/}
-                            {/*    </div>*/}
-                            {/*</div>*/}
                         </div>
                     </div>
                 </div>
@@ -403,25 +355,5 @@ export default function Home() {
                 </div>
             </footer>
         </>
-        // <main className="max-w-6xl mx-auto p-10 text-white text-center border m-10 rounded-md bg-gradient-to-tr from-blue-500 to-purple-500">
-        //     <div className="mb-10">
-        //         <h1 className="text-4xl font-extrabold mb-2">Test</h1>
-        //         <h2 className="text-2xl">
-        //             Pay
-        //             <span className="font-bold"> {amount} Ron</span>
-        //         </h2>
-        //     </div>
-        //
-        //     <Elements
-        //         stripe={stripePromise}
-        //         options={{
-        //             mode: "subscription",
-        //             amount: convertToSubcurrency(amount),
-        //             currency: "ron",
-        //         }}
-        //     >
-        //         <CheckoutPage amount={amount} />
-        //     </Elements>
-        // </main>
     );
 }
