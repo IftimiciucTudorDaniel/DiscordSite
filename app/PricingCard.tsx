@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
-import TermsModal from "./TermsModal"
+import TermsModal from "./TermsModal";
 const PricingCard = ({ plan, onClick }) => {
     const [selectedDuration, setSelectedDuration] = useState("1month");
     const [showModal, setShowModal] = useState(false);
