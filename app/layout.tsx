@@ -25,11 +25,11 @@ export default function RootLayout({
       <body>
       {children}
 
-      <Script src="/js/jquery-2.2.4.min.js" strategy="beforeInteractive" />
-      <Script src="/js/bootstrap.min.js" strategy="afterInteractive" />
-      <Script src="/js/select2.min.js" strategy="afterInteractive" />
-      <Script src="/js/jquery.magnific-popup.min.js" strategy="afterInteractive" />
-      <Script src="/js/custom.js" strategy="afterInteractive" />
+      <Script src="/js/jquery-2.2.4.min.js" strategy="beforeInteractive"/>
+      <Script src="/js/bootstrap.min.js" strategy="afterInteractive"/>
+      <Script src="/js/select2.min.js" strategy="afterInteractive"/>
+      <Script src="/js/jquery.magnific-popup.min.js" strategy="afterInteractive"/>
+      <Script src="/js/custom.js" strategy="afterInteractive"/>
 
 
       </body>

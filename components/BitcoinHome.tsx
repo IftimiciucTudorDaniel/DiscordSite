@@ -6,9 +6,12 @@ const slides = [
     {
         id: 0,
         title: (
-            <h3 className="text-black text-9xl italic">
-                WELCOME
-            </h3>
+            <div className="text-8xl">
+                <h3 className="service-box-content">
+                    IDW Academy<br/>
+                    Learning
+                </h3>
+            </div>
         ),
         buttonText: "Learn more",
         buttonLink: "/about",
@@ -18,7 +21,7 @@ const slides = [
         id: 1,
         title: (
             <h3 className="text-black text-9xl italic">
-                WELCOME
+                IDW ACADEMY
             </h3>
         ),
         buttonText: "Our prices",

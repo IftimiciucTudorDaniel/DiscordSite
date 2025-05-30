@@ -12,6 +12,7 @@ import PricingCard from './PricingCard';
 import Preloader from "./Preloader";
 const stripePromise = loadStripe("pk_test_51MKLiAJXJISDpaiuaphCVhzrp3hkCkHUxyuNfIPS4ZxH1hY8ZsH4ygvk7WKnRvHPc6xwfioqvdvf4PNfCeBFxfZP00qQgwToiN");
 import BitcoinHome from '../components/BitcoinHome';
+import { a } from "framer-motion/dist/types.d-CQt5spQA";
 
 export default function Home() {
     const [loading, setLoading] = useState(true);
@@ -20,6 +21,51 @@ export default function Home() {
         const timer = setTimeout(() => setLoading(false), 2000);
         return () => clearTimeout(timer);
     }, []);
+    const services = [
+        {
+            icon: "diversification.png",
+            alt: "risk diversification",
+            title: "Risk Diversification",
+            text: "Emphasize the importance of spreading investments across various companies and sectors. Attain skills to construct a robust portfolio that balances high-reward opportunities with prudent risk management."
+        },
+        {
+            icon: "community.png",
+            alt: "community and networking",
+            title: "Community and Networking",
+            text: "Connect with a community of like-minded investors and industry experts. Engage in discussions, workshops, and networking events to enrich your understanding and broaden your investment horizons."
+        },
+        {
+            icon: "guidance.png",
+            alt: "expert guidance",
+            title: "Expert Guidance",
+            text: "Benefit from seasoned professionals who offer tailored advice and insights. Personalized mentorship supports learners in aligning their investment practices with their financial goals."
+        },
+        {
+            icon: "ethical.png",
+            alt: "ethical investing",
+            title: "Ethical Investing",
+            text: "Incorporate environmental, social, and governance (ESG) criteria into investment decisions. The Academy highlights the significance of sustainable, ethical investing for long-term market impact."
+        },
+
+        {
+            icon: "long-term.png",
+            alt: "long-term approach",
+            title: "Long-term Approach",
+            text: "Cultivate patience and strategic foresight. IWM Academy  encourages a long-term perspective, essential for growth investors who aim for substantial, sustainable returns."
+        },
+        {
+            icon: "tools.png",
+            alt: "actionable tools",
+            title: "Actionable Tools",
+            text: "Gain hands-on experience with real-world scenarios and investment simulations, preparing you to make informed decisions in dynamic markets."
+        },
+        {
+            icon: "enhancement.png",
+            alt: "continuous enhancement",
+            title: "Continuous Enhancement",
+            text: "Stay abreast of market trends and evolving financial instruments. The Academy emphasizes continuous learning, equipping investors with tools to adapt to ever-changing market conditions."
+        },
+    ];
     const plans = [
         {
             title: "Small Cap Academy",
@@ -149,53 +195,48 @@ export default function Home() {
                         <div className="row text-center mb-10">
                             <h2 className="title-head">About <span>Us</span></h2>
                             <div className="title-head-subtitle">
-                                <p>Infinite World Markets Academy provides a comprehensive, insightful pathway for mastering the art of business growth investing. Learn to navigate this dynamic field the right way with these focused steps:
+                                <p>IWM Academy provides a comprehensive, insightful pathway for mastering the art of business growth investing. Learn to navigate this dynamic field the right way with these focused steps:
                                 </p>
                             </div>
                         </div>
-                        <div className="row about-content">
-                            <div className="col-sm-12 col-md-5 col-lg-6 text-center">
-                                <Image src="/images/fulllogo.png" alt="about us" className="img-responsive img-about-us"
-                                       width={540} height={360}/>
+                        <div className="container">
+                            <div className="row">
+                                {services.map((service, index) => (
+                                    <div className="col-md-6 service-box" key={index}>
+                                        <div>
+                                            {/*<img*/}
+                                            {/*    src={`images/icons/orange/${service.icon}`}*/}
+                                            {/*    alt={service.alt}*/}
+                                            {/*/>*/}
+                                            <div className="service-box-content">
+                                                <h3>{service.title}</h3>
+                                                <p>{service.text}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
-                            <div className="col-sm-12 col-md-7 col-lg-6">
-                                <h3 className="title-about">WE ARE Infinite World Market Academy</h3>
-                                <p className="about-text">Infinite World Market Academy is a trusted learning hub for those looking to master the art of investing. We provide a strong educational foundation through practical, guided courses designed to build both competence and confidence. Whether youre just starting out or looking to refine your financial strategies, our academy supports your growth every step of the way — with patience, precision, and purpose.</p>
-                                <ul className="nav nav-tabs text-3xl text-white font-bold">
-                                    <li className="active"><a data-toggle="tab" href="#menu1">Our Mission </a></li>
-                                    <li><a data-toggle="tab" href="#menu2"> Our advantages </a></li>
-                                    <li><a data-toggle="tab" href="#menu3">Our guarantees </a></li>
-                                </ul>
-                                <div className="tab-content">
-                                    <div id="menu1" className="tab-pane fade in active">
-                                        <p>To deliver comprehensive, accessible, and transformative financial education that equips individuals with the knowledge and confidence to invest wisely and grow sustainably. We are committed to fostering long-term success through patience-driven learning and strategic empowerment.
-                                        </p>
-                                    </div>
-                                    <div id="menu2" className="tab-pane fade text-5xl text-white font-bold">
-                                        <p>🎓 Expert-led Courses – Learn directly from industry professionals with real-world experience.
+                        </div>
+                    </div>
+                </section>
 
-                                            <br/>🧭 Structured Guidance – Clear learning paths designed to support beginners and intermediate investors alike.
-
-                                            <br/>🌍 Community & Support – Access to a vibrant network of learners, mentors, and support staff.
-
-                                            <br/>🔄 Lifelong Learning – Continuous updates and resources to help you adapt in a dynamic financial landscape.
-
-                                            <br/>📈 Practical Outcomes – Knowledge you can apply immediately to real investment scenarios.</p>
-                                    </div>
-                                    <div id="menu3" className="tab-pane fade">
-                                        <p>Clarity – All concepts are taught with simplicity and purpose, ensuring no learner is left behind.
-                                            <br/>Quality Education – We stand by the integrity and accuracy of every course we offer.
-                                            <br/>Progress Tracking – Your learning path is tracked and adapted to your pace and growth.
-                                            <br/>Satisfaction First – If you’re not satisfied with your learning experience, we offer support and flexible options to make it right. </p>
-                                    </div>
-                                </div>
+                <section className="facts py-5 ">
+                    <div className="container mt-10">
+                        <div className="row text-center facts-content">
+                            <div className="col-12 heading-facts mb-4">
+                                <h2>
+                                    About<span> Platform</span>
+                                </h2>
+                                <p className="lead">
+                                    Leading cryptocurrency exchange since day one of Bitcoin distribution.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 <div className="mb-10">
-                    <h2 className="title-head text-center">Packege <span>Pricing</span></h2>
+                    <h2 className="title-head text-center">Package <span>Pricing</span></h2>
                 </div>
 
                 <div className="flex flex-wrap justify-center gap-8 mb-20">
@@ -203,141 +244,133 @@ export default function Home() {
                         <PricingCard key={plan.title} plan={plan} onClick={setSelectedPlan} />
                     ))}
                 </div>
+                {/*<div className="mb-10">*/}
+                {/*    <h2 className="title-head text-center">More <span>Informations</span></h2>*/}
+                {/*</div>*/}
 
-                {selectedPlan && (
-                    <motion.div
-                        id="checkout"
-                        className="w-full max-w-2xl mx-auto mt-12 bg-[#1D1D1D] border border-[#1D1D1D] p-8 rounded-xl shadow-xl"
-                        initial={{opacity: 0, y: 30, scale: 0.95}}
-                        animate={{opacity: 1, y: 0, scale: 1}}
-                        exit={{opacity: 0, y: 30, scale: 0.95}}
-                        transition={{duration: 0.5, ease: "easeOut"}}
-                    >
-                        <h2 className="text-2xl text-[white] font-bold mb-6 text-center">
-                            Complete your subscription for
-                            <span className="text-purple-400">{selectedPlan.title}</span>
-                        </h2>
+                {/*<section className="image-block centered-columns">*/}
+                {/*    <div className="container-fluid">*/}
+                {/*        <div className="row justify-content-center">*/}
+                {/*            <div className="col-md-6 column-left">*/}
+                {/*                <div className="feature text-center m-16">*/}
+                {/*                    <h3 className="feature-title">Foundational Knowledge</h3>*/}
+                {/*                    <p>Begin with a deep dive into market fundamentals, exploring the intricacies of capital allocation in growth sectors.  <br/>Gain insights into what distinguishes high-potential businesses.*/}
+                {/*                    </p>*/}
+                {/*                </div>*/}
+                {/*                <div className="feature text-center m-16">*/}
 
-                        <Elements
-                            stripe={stripePromise}
-                            options={{
-                                mode: "subscription",
-                                amount: convertToSubcurrency(selectedPlan.price),
-                                currency: "ron",
-                            }}
-                        >
-                            <CheckoutForm
-                                priceId={selectedPlan.priceId}
-                                amount={selectedPlan.price}
-                            />
-                        </Elements>
-                    </motion.div>
-                )}
+                {/*                    <h3 className="feature-title">Strategic Insights</h3>*/}
+                {/*                    <p>At the Academy, experts reveal secrets behind identifying rapidly expanding industries,<br/> guiding learners to recognize lucrative investment opportunities in sectors like technology, biotech, and green energy.*/}
+                {/*                    </p>*/}
+                {/*                </div>*/}
+                {/*                <div className="feature text-center m-16">*/}
 
-                <div className="mb-10">
-                    <h2 className="title-head text-center">More <span>Informations</span></h2>
-                </div>
+                {/*                    <h3 className="feature-title">Company Analysis</h3>*/}
+                {/*                    <p>Learn to dissect financial statements and assess business models. Understand key indicators like revenue trajectories <br/> market share expansion, and profitability, all crucial for evaluating a companys growth potential.*/}
+                {/*                    </p>*/}
+                {/*                </div>*/}
+                {/*            </div>*/}
+                {/*            <div className="col-md-6 column-right">*/}
+                {/*                <div className="feature text-center m-16">*/}
 
-                <section className="image-block centered-columns">
-                    <div className="container-fluid">
-                        <div className="row justify-content-center">
-                            <div className="col-md-6 column-left">
-                                <div className="feature text-center m-16">
-                                    <h3 className="feature-title">Foundational Knowledge</h3>
-                                    <p>Begin with a deep dive into market fundamentals, exploring the intricacies of capital allocation in growth sectors.  <br/>Gain insights into what distinguishes high-potential businesses.
-                                    </p>
-                                </div>
-                                <div className="feature text-center m-16">
+                {/*                    <h3 className="feature-title">Expert Guidance</h3>*/}
+                {/*                    <p>Learn from experienced professionals and industry leaders.<br/>  and industry leaders.</p>*/}
+                {/*                </div>*/}
+                {/*                <div className="feature text-center m-16">*/}
 
-                                    <h3 className="feature-title">Strategic Insights</h3>
-                                    <p>At the Academy, experts reveal secrets behind identifying rapidly expanding industries,<br/> guiding learners to recognize lucrative investment opportunities in sectors like technology, biotech, and green energy.
-                                    </p>
-                                </div>
-                                <div className="feature text-center m-16">
+                {/*                    <h3 className="feature-title">Comprehensive Curriculum</h3>*/}
+                {/*                    <p>Master essential investment knowledge and practical skills.</p>*/}
+                {/*                </div>*/}
+                {/*                <div className="feature text-center m-16">*/}
 
-                                    <h3 className="feature-title">Company Analysis</h3>
-                                    <p>Learn to dissect financial statements and assess business models. Understand key indicators like revenue trajectories <br/> market share expansion, and profitability, all crucial for evaluating a companys growth potential.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="col-md-6 column-right">
-                                <div className="feature text-center m-16">
-
-                                    <h3 className="feature-title">Expert Guidance</h3>
-                                    <p>Learn from experienced professionals and industry leaders.<br/>  and industry leaders.</p>
-                                </div>
-                                <div className="feature text-center m-16">
-
-                                    <h3 className="feature-title">Comprehensive Curriculum</h3>
-                                    <p>Master essential investment knowledge and practical skills.</p>
-                                </div>
-                                <div className="feature text-center m-16">
-
-                                    <h3 className="feature-title">Cost Efficiency</h3>
-                                    <p>We believe in reasonable fees, ensuring that top-tier financial education  <br/>attainable for all our dedicated students.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                {/*                    <h3 className="feature-title">Cost Efficiency</h3>*/}
+                {/*                    <p>We believe in reasonable fees, ensuring that top-tier financial education  <br/>attainable for all our dedicated students.</p>*/}
+                {/*                </div>*/}
+                {/*            </div>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*</section>*/}
             </div>
             <footer className="footer">
                 <div className="top-footer">
                     <div className="container">
                         <div className="row">
-                            <div className="col-sm-4 col-md-2">
-                                <h4>Our Company</h4>
-                                <div className="menu">
-                                    <ul>
-                                        <li><Link href="/">Home</Link></li>
-                                        <li><Link href="/about">About</Link></li>
-                                        <li><Link href="/services">Services</Link></li>
-                                        <li><Link href="/pricing">Pricing</Link></li>
-                                        <li><Link href="/blog-right-sidebar">Blog</Link></li>
-                                        <li><Link href="/contact">Contact</Link></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="col-sm-4 col-md-2">
-                                <h4>Help & Support</h4>
-                                <div className="menu">
-                                    <ul>
-                                        <li><Link href="/faq">FAQ</Link></li>
-                                        <li><Link href="/terms-of-services">Terms of Services</Link></li>
-                                        <li><Link href="/404">404</Link></li>
-                                        <li><Link href="/register">Register</Link></li>
-                                        <li><Link href="/login">Login</Link></li>
-                                        <li><Link href="/coming-soon">Coming Soon</Link></li>
-                                    </ul>
-                                </div>
-                            </div>
                             <div className="col-sm-4 col-md-3">
                                 <h4>Contact Us </h4>
                                 <div className="contacts">
                                     <div>
-                                        <span>contact@website.com</span>
-                                    </div>
-                                    <div>
-                                        <span>00216 21 184 010</span>
+                                        <a href="mailto:contact@website.com" className="text-white hover:underline">
+                                            contact@website.com
+                                        </a>
                                     </div>
                                     <div>
                                         <span>London, England</span>
                                     </div>
+                                </div>
+                            </div>
+                            <div className="col-sm-4 col-md-2">
+                                <h4>Patreon </h4>
+                                <div className="contacts">
                                     <div>
-                                        <span>mon-sat 08am – 05pm</span>
+                                        <a href="mailto:contact@website.com" className="text-white hover:underline">
+                                            Patreon Link
+                                        </a>
                                     </div>
                                 </div>
-                                <div className="social-footer">
-                                    <ul>
-                                        <li><Link href="#" target="_blank"><i className="fa fa-facebook"></i></Link>
-                                        </li>
-                                        <li><Link href="#" target="_blank"><i className="fa fa-twitter"></i></Link></li>
-                                        <li><Link href="#" target="_blank"><i className="fa fa-google-plus"></i></Link>
-                                        </li>
-                                        <li><Link href="#" target="_blank"><i className="fa fa-linkedin"></i></Link>
-                                        </li>
-                                    </ul>
-                                </div>
+
+                                {/*<div className="col-sm-4 col-md-2">*/}
+                            {/*    <h4>Our Company</h4>*/}
+                            {/*    <div className="menu">*/}
+                            {/*        <ul>*/}
+                            {/*            <li><Link href="/">Home</Link></li>*/}
+                            {/*            <li><Link href="/about">About</Link></li>*/}
+                            {/*            <li><Link href="/services">Services</Link></li>*/}
+                            {/*            <li><Link href="/pricing">Pricing</Link></li>*/}
+                            {/*            <li><Link href="/blog-right-sidebar">Blog</Link></li>*/}
+                            {/*            <li><Link href="/contact">Contact</Link></li>*/}
+                            {/*        </ul>*/}
+                            {/*    </div>*/}
+                            {/*</div>*/}
+                            {/*<div className="col-sm-4 col-md-2">*/}
+                            {/*    <h4>Help & Support</h4>*/}
+                            {/*    <div className="menu">*/}
+                            {/*        <ul>*/}
+                            {/*            <li><Link href="/faq">FAQ</Link></li>*/}
+                            {/*            <li><Link href="/terms-of-services">Terms of Services</Link></li>*/}
+                            {/*            <li><Link href="/404">404</Link></li>*/}
+                            {/*            <li><Link href="/register">Register</Link></li>*/}
+                            {/*            <li><Link href="/login">Login</Link></li>*/}
+                            {/*            <li><Link href="/coming-soon">Coming Soon</Link></li>*/}
+                            {/*        </ul>*/}
+                            {/*    </div>*/}
+                            {/*</div>*/}
+                            {/*<div className="col-sm-4 col-md-3">*/}
+                            {/*    <h4>Contact Us </h4>*/}
+                            {/*    <div className="contacts">*/}
+                            {/*        <div>*/}
+                            {/*            <span>contact@website.com</span>*/}
+                            {/*        </div>*/}
+                            {/*        <div>*/}
+                            {/*            <span>00216 21 184 010</span>*/}
+                            {/*        </div>*/}
+                            {/*        <div>*/}
+                            {/*            <span>London, England</span>*/}
+                            {/*        </div>*/}
+                            {/*        <div>*/}
+                            {/*            <span>mon-sat 08am – 05pm</span>*/}
+                            {/*        </div>*/}
+                            {/*    </div>*/}
+                            {/*    <div className="social-footer">*/}
+                            {/*        <ul>*/}
+                            {/*            <li><Link href="#" target="_blank"><i className="fa fa-facebook"></i></Link>*/}
+                            {/*            </li>*/}
+                            {/*            <li><Link href="#" target="_blank"><i className="fa fa-twitter"></i></Link></li>*/}
+                            {/*            <li><Link href="#" target="_blank"><i className="fa fa-google-plus"></i></Link>*/}
+                            {/*            </li>*/}
+                            {/*            <li><Link href="#" target="_blank"><i className="fa fa-linkedin"></i></Link>*/}
+                            {/*            </li>*/}
+                            {/*        </ul>*/}
+                            {/*    </div>*/}
                             </div>
                         </div>
                     </div>
@@ -346,9 +379,7 @@ export default function Home() {
                     <div className="container">
                         <div className="row">
                             <div className="col-xs-12">
-                                <p className="text-center">Copyright © 2018 Bayya All Rights Reserved | Created with
-                                    Love by <Link href="https://themeforest.net/user/celtano"
-                                                  target="_blank">celtano</Link></p>
+                                <p className="text-center">Copyright © 2025 IWM ACADEMY All Rights Reserved</p>
                             </div>
                         </div>
                     </div>
