@@ -230,12 +230,17 @@ export default function Home() {
                 <section className="facts py-12 md:py-20 bg-[#1f1f1f] text-white relative z-0">
                     <div className="container mx-auto max-w-[1200px] px-4">
                         <div className="text-center">
-                            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white">
+                            <h2 className="text-6xl sm:text-5xl md:text-6xl font-bold text-white">
+                                {/* Changed from text-5xl to text-6xl for mobile */}
                                 About <span className="text-orange-500">Platfoarm</span>
                             </h2>
-                            <p className="text-lg sm:text-xl mt-5">IWM Academy private network</p>
+                            <p className="text-2xl sm:text-xl mt-5">
+                                {/* Changed from text-xl to text-2xl for mobile */}
+                                IWM Academy private network
+                            </p>
                             <div className="flex justify-center">
-                                <p className="mt-10 px-4 md:px-0 max-w-8xl text-base sm:text-3xl lg:text-3xl max-w-8xl leading-relaxed">
+                                <p className="mt-10 px-4 md:px-0 max-w-8xl text-3xl sm:text-3xl lg:text-3xl max-w-8xl leading-relaxed">
+                                    {/* Changed from text-lg to text-xl for mobile */}
                                     Welcome to the IWM Academy private network, a thriving community where ambition
                                     meets opportunity! Connect and collaborate with fellow members who are avid
                                     learners, successful entrepreneurs, and savvy investors. Experience the power of
@@ -245,11 +250,7 @@ export default function Home() {
                                     of a network committed to success and lifelong learning. Join us on this exciting
                                     journey and be part of a dynamic community thats transforming potential
                                     into&nbsp;prosperity!
-                                </p>
-                            </div>
-
-                            <div className="flex justify-center">
-                                <p className="mt-8 px-4 md:px-0 max-w-8xl text-base sm:text-3xl lg:text-3xl max-w-8xl leading-relaxed">
+                              <br/><br/>
                                     Unlock exclusive access to the IWM Academy by joining us through Patreon! Discover a
                                     world where learning meets limitless possibilities within our vibrant private
                                     network. As a valued member, youll enjoy a sneak peek into this exciting community,

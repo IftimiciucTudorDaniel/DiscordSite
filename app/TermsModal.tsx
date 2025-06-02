@@ -104,14 +104,14 @@ const TermsModal = ({ isOpen, onClose, selectedPlan }) => {
                     >
                         Cancel
                     </button>
-                    <button
-                        onClick={() => {
-                            onClose();
-                        }}
-                        className="px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-lg font-bold rounded-lg text-black transition"
-                    >
-                        Confirm Order
-                    </button>
+                    {/*<button*/}
+                    {/*    onClick={() => {*/}
+                    {/*        onClose();*/}
+                    {/*    }}*/}
+                    {/*    className="px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-lg font-bold rounded-lg text-black transition"*/}
+                    {/*>*/}
+                    {/*    Confirm Order*/}
+                    {/*</button>*/}
                 </div>
             </div>
         </div>
