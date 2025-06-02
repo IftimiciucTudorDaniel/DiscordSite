@@ -25,7 +25,7 @@ const TermsModal = ({ isOpen, onClose, selectedPlan }) => {
 
 
     const PaymentItem = ({ label, value }) => (
-        <p className="text-gray-300 flex items-center gap-2">
+        <p className="text-gray-300 flex items-center gap-2 text-xl">
             {label}: <span className="text-yellow-400">{value}</span>
             <button
                 onClick={() => copyToClipboard(value)}

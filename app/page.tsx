@@ -232,7 +232,7 @@ export default function Home() {
                         <div className="text-center">
                             <h2 className="text-6xl sm:text-5xl md:text-6xl font-bold text-white">
                                 {/* Changed from text-5xl to text-6xl for mobile */}
-                                About <span className="text-orange-500">Platfoarm</span>
+                                About <span className="text-orange-500">Platform</span>
                             </h2>
                             <p className="text-2xl sm:text-xl mt-5">
                                 {/* Changed from text-xl to text-2xl for mobile */}

@@ -9,7 +9,7 @@ const slides = [
         // Simplified title structure to allow CSS module to control appearance
         title: (
             <>
-                IDW Academy<br />
+                IWM Academy<br />
                 Learning
             </>
         ),
@@ -20,7 +20,7 @@ const slides = [
         id: 1,
         title: (
             <>
-                IDW Academy<br />
+                IWM Academy<br />
                 Learning
             </>
         ),
