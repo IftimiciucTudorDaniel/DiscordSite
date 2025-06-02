@@ -39,7 +39,7 @@ const TermsModal = ({ isOpen, onClose, selectedPlan }) => {
 
     return (
         <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-[9999] flex items-center justify-center px-4 overflow-y-auto">
-            <div className="bg-[#1D1D1D] max-w-[1000px] w-full max-h-[110vh] p-10 rounded-2xl shadow-2xl relative text-white my-8">
+            <div className="bg-[#1D1D1D] max-w-[1160px] w-full max-h-[110vh] p-10 rounded-2xl shadow-2xl relative text-white my-8">
                 <p className="text-xl sm:text-2xl mb-6 text-gray-300">
                     <strong>Plan:</strong> {selectedPlan.planTitle}<br />
                     <strong>Price:</strong> ${selectedPlan.price} / {selectedPlan.duration}
