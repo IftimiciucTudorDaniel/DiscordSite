@@ -91,7 +91,7 @@ const TermsModal = ({ isOpen, onClose, selectedPlan }) => {
                     <h4 className="text-lg font-semibold mb-2">Payment Info</h4>
                     <PaymentItem label="Recipient" value="INFINITE WORLD MARKETS LTD" />
                     <PaymentItem label="Currency accepted" value="USD" />
-                    <PaymentItem label="IBAN" value="GB60 REVO 0099 6968 2627 30" />
+                    <PaymentItem label="IBAN" value="GB60REVO00996968262730" />
                     <PaymentItem label="BIC" value="REVOGB21" />
                     <PaymentItem label="Intermediary BIC" value="CHASGB2L" />
                 </div>
