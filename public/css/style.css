@@ -1256,7 +1256,7 @@ ul.nav.nav-tabs li a:hover, ul.nav.nav-tabs li.active a:hover {
   padding-bottom: 0;
   top: -60px;
   position: relative;
-  z-index: 10;
+  z-index: 0;
 }
 
 .features-row {
@@ -5216,6 +5216,6 @@ button:focus {
   border-color: #45a049;
 }
 
-body.modal-open {
-  overflow: hidden;
+body {
+  overscroll-behavior: none;
 }

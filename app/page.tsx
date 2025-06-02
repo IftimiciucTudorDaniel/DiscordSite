@@ -1,6 +1,6 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {Elements} from "@stripe/react-stripe-js";
@@ -13,10 +13,12 @@ import Preloader from "./Preloader";
 const stripePromise = loadStripe("pk_test_51MKLiAJXJISDpaiuaphCVhzrp3hkCkHUxyuNfIPS4ZxH1hY8ZsH4ygvk7WKnRvHPc6xwfioqvdvf4PNfCeBFxfZP00qQgwToiN");
 import BitcoinHome from '../components/BitcoinHome';
 import { a } from "framer-motion/dist/types.d-CQt5spQA";
+import TermsModal from "./TermsModal";
 
 export default function Home() {
     const [loading, setLoading] = useState(true);
-    const [selectedPlan, setSelectedPlan] = useState(null);
+    const [showModal, setShowModal] = useState(false);
+    const [selectedPlanData, setSelectedPlanData] = useState(null);
     useEffect(() => {
         const timer = setTimeout(() => setLoading(false), 2000);
         return () => clearTimeout(timer);
@@ -225,7 +227,7 @@ export default function Home() {
                     </div>
                 </section>
 
-                <section className="facts py-12 md:py-20 bg-[#1f1f1f] text-white relative z-10">
+                <section className="facts py-12 md:py-20 bg-[#1f1f1f] text-white relative z-0">
                     <div className="container mx-auto max-w-[1200px] px-4">
                         <div className="text-center">
                             <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white">
@@ -271,57 +273,10 @@ export default function Home() {
                     </div>
                     <div className="flex flex-wrap justify-center gap-8 mb-20">
                         {plans.map((plan) => (
-                            <PricingCard key={plan.title} plan={plan} onClick={setSelectedPlan}/>
+                            <PricingCard key={plan.title} plan={plan} />
                         ))}
                     </div>
                 </section>
-
-                {/*<div className="mb-10">*/}
-                {/*    <h2 className="title-head text-center">More <span>Informations</span></h2>*/}
-                {/*</div>*/}
-
-                {/*<section className="image-block centered-columns">*/}
-                {/*    <div className="container-fluid">*/}
-                {/*        <div className="row justify-content-center">*/}
-                {/*            <div className="col-md-6 column-left">*/}
-                {/*                <div className="feature text-center m-16">*/}
-                {/*                    <h3 className="feature-title">Foundational Knowledge</h3>*/}
-                {/*                    <p>Begin with a deep dive into market fundamentals, exploring the intricacies of capital allocation in growth sectors.  <br/>Gain insights into what distinguishes high-potential businesses.*/}
-                {/*                    </p>*/}
-                {/*                </div>*/}
-                {/*                <div className="feature text-center m-16">*/}
-
-                {/*                    <h3 className="feature-title">Strategic Insights</h3>*/}
-                {/*                    <p>At the Academy, experts reveal secrets behind identifying rapidly expanding industries,<br/> guiding learners to recognize lucrative investment opportunities in sectors like technology, biotech, and green energy.*/}
-                {/*                    </p>*/}
-                {/*                </div>*/}
-                {/*                <div className="feature text-center m-16">*/}
-
-                {/*                    <h3 className="feature-title">Company Analysis</h3>*/}
-                {/*                    <p>Learn to dissect financial statements and assess business models. Understand key indicators like revenue trajectories <br/> market share expansion, and profitability, all crucial for evaluating a companys growth potential.*/}
-                {/*                    </p>*/}
-                {/*                </div>*/}
-                {/*            </div>*/}
-                {/*            <div className="col-md-6 column-right">*/}
-                {/*                <div className="feature text-center m-16">*/}
-
-                {/*                    <h3 className="feature-title">Expert Guidance</h3>*/}
-                {/*                    <p>Learn from experienced professionals and industry leaders.<br/>  and industry leaders.</p>*/}
-                {/*                </div>*/}
-                {/*                <div className="feature text-center m-16">*/}
-
-                {/*                    <h3 className="feature-title">Comprehensive Curriculum</h3>*/}
-                {/*                    <p>Master essential investment knowledge and practical skills.</p>*/}
-                {/*                </div>*/}
-                {/*                <div className="feature text-center m-16">*/}
-
-                {/*                    <h3 className="feature-title">Cost Efficiency</h3>*/}
-                {/*                    <p>We believe in reasonable fees, ensuring that top-tier financial education  <br/>attainable for all our dedicated students.</p>*/}
-                {/*                </div>*/}
-                {/*            </div>*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
-                {/*</section>*/}
             </div>
             <footer className="footer">
                 <div className="top-footer">
@@ -349,60 +304,6 @@ export default function Home() {
                                         </a>
                                     </div>
                                 </div>
-
-                                {/*<div className="col-sm-4 col-md-2">*/}
-                                {/*    <h4>Our Company</h4>*/}
-                                {/*    <div className="menu">*/}
-                                {/*        <ul>*/}
-                                {/*            <li><Link href="/">Home</Link></li>*/}
-                                {/*            <li><Link href="/about">About</Link></li>*/}
-                                {/*            <li><Link href="/services">Services</Link></li>*/}
-                                {/*            <li><Link href="/pricing">Pricing</Link></li>*/}
-                                {/*            <li><Link href="/blog-right-sidebar">Blog</Link></li>*/}
-                                {/*            <li><Link href="/contact">Contact</Link></li>*/}
-                                {/*        </ul>*/}
-                                {/*    </div>*/}
-                            {/*</div>*/}
-                            {/*<div className="col-sm-4 col-md-2">*/}
-                            {/*    <h4>Help & Support</h4>*/}
-                            {/*    <div className="menu">*/}
-                            {/*        <ul>*/}
-                            {/*            <li><Link href="/faq">FAQ</Link></li>*/}
-                            {/*            <li><Link href="/terms-of-services">Terms of Services</Link></li>*/}
-                            {/*            <li><Link href="/404">404</Link></li>*/}
-                            {/*            <li><Link href="/register">Register</Link></li>*/}
-                            {/*            <li><Link href="/login">Login</Link></li>*/}
-                            {/*            <li><Link href="/coming-soon">Coming Soon</Link></li>*/}
-                            {/*        </ul>*/}
-                            {/*    </div>*/}
-                            {/*</div>*/}
-                            {/*<div className="col-sm-4 col-md-3">*/}
-                            {/*    <h4>Contact Us </h4>*/}
-                            {/*    <div className="contacts">*/}
-                            {/*        <div>*/}
-                            {/*            <span>contact@website.com</span>*/}
-                            {/*        </div>*/}
-                            {/*        <div>*/}
-                            {/*            <span>00216 21 184 010</span>*/}
-                            {/*        </div>*/}
-                            {/*        <div>*/}
-                            {/*            <span>London, England</span>*/}
-                            {/*        </div>*/}
-                            {/*        <div>*/}
-                            {/*            <span>mon-sat 08am – 05pm</span>*/}
-                            {/*        </div>*/}
-                            {/*    </div>*/}
-                            {/*    <div className="social-footer">*/}
-                            {/*        <ul>*/}
-                            {/*            <li><Link href="#" target="_blank"><i className="fa fa-facebook"></i></Link>*/}
-                            {/*            </li>*/}
-                            {/*            <li><Link href="#" target="_blank"><i className="fa fa-twitter"></i></Link></li>*/}
-                            {/*            <li><Link href="#" target="_blank"><i className="fa fa-google-plus"></i></Link>*/}
-                            {/*            </li>*/}
-                            {/*            <li><Link href="#" target="_blank"><i className="fa fa-linkedin"></i></Link>*/}
-                            {/*            </li>*/}
-                            {/*        </ul>*/}
-                            {/*    </div>*/}
                             </div>
                         </div>
                     </div>
@@ -417,6 +318,12 @@ export default function Home() {
                     </div>
                 </div>
             </footer>
+            <TermsModal
+                isOpen={showModal}
+                onClose={() => {setShowModal(false); document.body.classList.remove("modal-open");}}
+                selectedPlan={selectedPlanData}
+            />
         </>
+
     );
 }
