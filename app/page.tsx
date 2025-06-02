@@ -278,46 +278,30 @@ export default function Home() {
                     </div>
                 </section>
             </div>
-            <footer className="footer">
-                <div className="top-footer">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-sm-4 col-md-3">
-                                <h4>Contact Us </h4>
-                                <div className="contacts">
-                                    <div>
-                                        <a href="mailto:contact@website.com" className="text-white hover:underline">
-                                            contact@website.com
-                                        </a>
-                                    </div>
-                                    <div>
-                                        <span>London, England</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-sm-4 col-md-2">
-                                <h4>Patreon </h4>
-                                <div className="contacts">
-                                    <div>
-                                        <a href="mailto:contact@website.com" className="text-white hover:underline">
-                                            Patreon Link
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+            <div className="bottom-footer bg-black py-4 text-white">
+                <div className="container">
+                    <div className="row justify-content-center text-center">
+                        <div className="col-12 mb-2">
+                            <p className="mb-1">
+                                <a href="mailto:contact@website.com" className="text-white hover:underline">
+                                    contact@website.com
+                                </a>
+                            </p>
+                            <p className="mb-1">
+                                <a href="https://patreon.com/your-patreon-link" target="_blank" rel="noopener noreferrer" className="text-white hover:underline">
+                                    Support us on Patreon
+                                </a>
+                            </p>
+                        </div>
+                        <div className="col-12">
+                            <p className="text-center text-sm text-gray-400">
+                                Copyright © 2025 IWM ACADEMY — All Rights Reserved
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div className="bottom-footer">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-xs-12">
-                                <p className="text-center">Copyright © 2025 IWM ACADEMY All Rights Reserved</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            </div>
+
             <TermsModal
                 isOpen={showModal}
                 onClose={() => {setShowModal(false); document.body.classList.remove("modal-open");}}
