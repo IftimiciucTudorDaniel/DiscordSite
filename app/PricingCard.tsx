@@ -20,8 +20,6 @@ const TermsModal = ({ isOpen, onClose, selectedPlan }) => {
         <div className="fixed inset-0 bg-black/100 backdrop-blur-md z-50 flex items-center justify-center px-4">
             <div className="bg-[#1D1D1D] max-w-[1360px] text-white w-full max-w-screen-2xl max-h-[90vh] p-10 rounded-2xl shadow-2xl  relative">
 
-                <h2 className="text-4xl font-bold mb-4">Confirm Your Order</h2>
-
                 <p className="text-2xl mb-6 text-gray-300">
                     <strong>Plan:</strong> {selectedPlan.planTitle}<br />
                     <strong>Price:</strong> ${selectedPlan.price} / {selectedPlan.duration}
