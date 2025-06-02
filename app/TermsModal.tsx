@@ -39,14 +39,13 @@ const TermsModal = ({ isOpen, onClose, selectedPlan }) => {
 
     return (
         <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-[9999] flex items-center justify-center px-4 overflow-y-auto">
-            <div className="bg-[#1D1D1D] max-w-[1160px] w-full max-h-[110vh] p-10 rounded-2xl shadow-2xl relative text-white my-8">
+            <div className="bg-[#1D1D1D] max-w-[1160px] w-full max-h-[150vh] p-10 rounded-2xl shadow-2xl relative text-white my-8">
                 <p className="text-xl sm:text-2xl mb-6 text-gray-300">
                     <strong>Plan:</strong> {selectedPlan.planTitle}<br />
                     <strong>Price:</strong> ${selectedPlan.price} / {selectedPlan.duration}
                 </p>
 
-                {/* Terms */}
-                <div className="mb-6 max-h-[400px] overflow-y-auto border border-gray-600 p-4 rounded bg-[#2b2b2b] text-sm text-gray-300 overscroll-y-contain">
+                <div className="mb-1 max-h-[360px] overflow-y-auto border border-gray-600 p-4 rounded bg-[#2b2b2b] text-sm text-gray-300 overscroll-y-contain">
                     <h3 className="text-2xl font-semibold mb-2 text-white">This Agreement outlines the terms and conditions under which IWM Academy collects and manages tuition and service fees. By enrolling in any courses or programs offered by IWM Academy, you acknowledge and agree to the following nonrefundable fee policy.
                     </h3>
 
@@ -97,7 +96,7 @@ const TermsModal = ({ isOpen, onClose, selectedPlan }) => {
                     <PaymentItem label="Intermediary BIC" value="CHASGB2L" />
                 </div>
 
-                <div className="flex justify-end gap-4 mt-6">
+                <div className="flex justify-end gap-4 mt-3">
                     <button
                         onClick={onClose}
                         className="px-6 py-3 border border-gray-500 text-lg rounded-lg text-white hover:bg-gray-700 transition font-medium"
