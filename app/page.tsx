@@ -233,7 +233,7 @@ export default function Home() {
                             </h2>
                             <p className="text-lg sm:text-xl mt-5">IWM Academy private network</p>
                             <div className="flex justify-center">
-                                <p className="mt-10 px-4 md:px-0 text-base sm:text-3xl lg:text-3xl max-w-8xl leading-relaxed">
+                                <p className="mt-10 px-4 md:px-0 max-w-8xl text-base sm:text-3xl lg:text-3xl max-w-8xl leading-relaxed">
                                     Welcome to the IWM Academy private network, a thriving community where ambition
                                     meets opportunity! Connect and collaborate with fellow members who are avid
                                     learners, successful entrepreneurs, and savvy investors. Experience the power of
@@ -247,7 +247,7 @@ export default function Home() {
                             </div>
 
                             <div className="flex justify-center">
-                                <p className="mt-8 px-4 md:px-0 text-base sm:text-3xl lg:text-3xl max-w-8xl leading-relaxed">
+                                <p className="mt-8 px-4 md:px-0 max-w-8xl text-base sm:text-3xl lg:text-3xl max-w-8xl leading-relaxed">
                                     Unlock exclusive access to the IWM Academy by joining us through Patreon! Discover a
                                     world where learning meets limitless possibilities within our vibrant private
                                     network. As a valued member, youll enjoy a sneak peek into this exciting community,
