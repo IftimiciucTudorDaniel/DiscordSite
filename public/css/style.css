@@ -5216,3 +5216,6 @@ button:focus {
   border-color: #45a049;
 }
 
+body.modal-open {
+  overflow: hidden;
+}

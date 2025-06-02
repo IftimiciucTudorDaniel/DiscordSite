@@ -150,65 +150,70 @@ export default function Home() {
     return (
         <>
             <div className="wrapper">
-                    <main><BitcoinHome/></main>
-                <section className="features">
+                <main><BitcoinHome/></main>
+                <section className="features py-5">
                     <div className="container">
                         <div className="row features-row">
-                            <div className="feature-box col-md-4 col-sm-12">
-                            <span className="feature-icon">
-                                <Image src="/images/icons/orange/buy-sell4.jpg" alt="" width={60}
-                                       height={60}/>
-                            </span>
-                                <div className="feature-box-content">
-                                    <h3>Foundational Knowledge</h3>
-                                    <p> Begin with a deep dive into market fundamentals, exploring the intricacies of capital allocation in growth sectors. Gain insights into what distinguishes high-potential businesses.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="feature-box two col-md-4 col-sm-12">
-                            <span className="feature-icon">
-                                <Image src="/images/icons/orange/buy-sell2.jpg" alt="" width={60}
-                                       height={60}/>
-                            </span>
-                                <div className="feature-box-content">
-                                    <h3>Strategic Insights</h3>
-                                    <p>At the Academy, experts reveal secrets behind identifying rapidly expanding industries, guiding learners to recognize lucrative investment opportunities in sectors like technology, biotech, and green energy.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="feature-box three col-md-4 col-sm-12">
-                                <span className="feature-icon">
-                                    <Image src="/images/icons/orange/buy-sell1.jpg" alt=""
-                                           width={60} height={60}/>
+                            <div className="feature-box col-lg-4 col-md-6 custom-col">
+                                <span className="feature-icon d-block text-center mb-3">
+                                  <Image src="/images/icons/orange/buy-sell4.jpg" alt="" width={60} height={60}/>
                                 </span>
-                                <div className="feature-box-content">
+                                <div className="feature-box-content text-center px-3">
+                                    <h3>Foundational Knowledge</h3>
+                                    <p>
+                                        Begin with a deep dive into market fundamentals, exploring the intricacies of
+                                        capital allocation in growth sectors. Gain insights into what distinguishes
+                                        high-potential businesses.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="feature-box col-lg-4 col-md-6 custom-col">
+                                <span className="feature-icon d-block text-center mb-3">
+                                  <Image src="/images/icons/orange/buy-sell2.jpg" alt="" width={60} height={60}/>
+                                </span>
+                                <div className="feature-box-content text-center px-3">
+                                    <h3>Strategic Insights</h3>
+                                    <p>
+                                        At the Academy, experts reveal secrets behind identifying rapidly expanding
+                                        industries, guiding learners to recognize lucrative investment opportunities in
+                                        sectors like technology, biotech, and green energy.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="feature-box col-lg-4 col-md-6 custom-col">
+                                <span className="feature-icon d-block text-center mb-3">
+                                  <Image src="/images/icons/orange/buy-sell1.jpg" alt="" width={60} height={60}/>
+                                </span>
+                                <div className="feature-box-content text-center px-3">
                                     <h3>Company Analysis</h3>
-                                    <p>Learn to dissect financial statements and assess business models. Understand key indicators like revenue trajectories, market share expansion, and profitability, all crucial for evaluating a companys growth potential.
+                                    <p>
+                                        Learn to dissect financial statements and assess business models. Understand key
+                                        indicators like revenue trajectories, market share expansion, and profitability,
+                                        all crucial for evaluating a company’s growth potential.
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
+
                 <section className="about-us">
                     <div className="container">
                         <div className="row text-center mb-10">
                             <h2 className="title-head">About <span>Us</span></h2>
                             <div className="title-head-subtitle">
-                                <p>IWM Academy provides a comprehensive, insightful pathway for mastering the art of business growth investing. Learn to navigate this dynamic field the right way with these focused steps:
+                                <p>IWM Academy provides a comprehensive, insightful pathway for mastering the art of
+                                    business growth investing. Learn to navigate this dynamic field the right way with
+                                    these focused steps:
                                 </p>
                             </div>
                         </div>
                         <div className="container">
                             <div className="row">
                                 {services.map((service, index) => (
-                                    <div className="col-md-6 service-box" key={index}>
-                                        <div>
-                                            {/*<img*/}
-                                            {/*    src={`images/icons/orange/${service.icon}`}*/}
-                                            {/*    alt={service.alt}*/}
-                                            {/*/>*/}
-                                            <div className="service-box-content">
+                                    <div className="col-md-6 mb-4" key={index}>
+                                        <div className="h-100 d-flex flex-column service-box">
+                                            <div className="service-box-content flex-grow-1">
                                                 <h3>{service.title}</h3>
                                                 <p>{service.text}</p>
                                             </div>
@@ -220,34 +225,57 @@ export default function Home() {
                     </div>
                 </section>
 
-                <section className="facts py-5 ">
-                    <div className="container mx-auto max-w-[1200px]">
-                        <div className="row text-center facts-content">
-                            <div className="col-12 heading-facts mb-4">
-                                <h2>
-                                    About<span> Platfoarm</span>
-                                </h2>
-                                <p className="text-xl mt-5">
-                                    IWM Academy private network</p>
-                                <p className="mt-10 ml-20 mr-20">Welcome to the IWM Academy private network, a thriving community where ambition meets opportunity! Connect and collaborate with fellow members who are avid learners, successful entrepreneurs, and savvy investors. Experience the power of collective knowledge and innovation as you engage with individuals who are not just getting educated but mastering the art of smart business growth and investment strategies. Dive into interactive sessions, share insights, and harness the energy of a network committed to success and lifelong learning. Join us on this exciting journey and be part of a dynamic community thats transforming potential into prosperity!</p>
+                <section className="facts py-12 md:py-20 bg-[#1f1f1f] text-white relative z-10">
+                    <div className="container mx-auto max-w-[1200px] px-4">
+                        <div className="text-center">
+                            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white">
+                                About <span className="text-orange-500">Platfoarm</span>
+                            </h2>
+                            <p className="text-lg sm:text-xl mt-5">IWM Academy private network</p>
+                            <div className="flex justify-center">
+                                <p className="mt-10 px-4 md:px-0 text-base sm:text-3xl lg:text-3xl max-w-8xl leading-relaxed">
+                                    Welcome to the IWM Academy private network, a thriving community where ambition
+                                    meets opportunity! Connect and collaborate with fellow members who are avid
+                                    learners, successful entrepreneurs, and savvy investors. Experience the power of
+                                    collective knowledge and innovation as you engage with individuals who are not just
+                                    getting educated but mastering the art of smart business growth and investment
+                                    strategies. Dive into interactive sessions, share insights, and harness the energy
+                                    of a network committed to success and lifelong learning. Join us on this exciting
+                                    journey and be part of a dynamic community thats transforming potential
+                                    into&nbsp;prosperity!
+                                </p>
+                            </div>
 
-                                <p className="mt-10 ml-20 mr-20">Unlock exclusive access to the IWM Academy by joining us through Patreon! Discover a world where learning meets limitless possibilities within our vibrant private network. As a valued member, youll enjoy a sneak peek into this exciting community, where you can seamlessly interact with passionate individuals who are on their journeys toward success.
-                                    Engage in enlightening conversations, exchange valuable insights, and witness firsthand the diverse paths of our members. With the freedom to explore various groups, youll have the opportunity to find the perfect fit for your goals, paving the way for personal and professional growth. Join us today for an inspiring experience, and be part of a network that empowers you to choose your path to greatness!</p>
+                            <div className="flex justify-center">
+                                <p className="mt-8 px-4 md:px-0 text-base sm:text-3xl lg:text-3xl max-w-8xl leading-relaxed">
+                                    Unlock exclusive access to the IWM Academy by joining us through Patreon! Discover a
+                                    world where learning meets limitless possibilities within our vibrant private
+                                    network. As a valued member, youll enjoy a sneak peek into this exciting community,
+                                    where you can seamlessly interact with passionate individuals who are on their
+                                    journeys toward success. Engage in enlightening conversations, exchange valuable
+                                    insights, and witness firsthand the diverse paths of our members. With the freedom
+                                    to explore various groups, youll have the opportunity to find the perfect fit for
+                                    your goals, paving the way for personal and professional growth. Join us today for
+                                    an inspiring experience, and be part of a network that empowers you to choose your
+                                    path&nbsp;to&nbsp;greatness!
+                                </p>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <div className="mb-10">
-                    <h2 className="title-head text-center">Package <span>Pricing</span></h2>
-                </div>
+                <section className="relative z-0">
+                    <div className="mb-10">
+                        <h2 className="title-head text-center">Package <span className="text-orange-500">Pricing</span>
+                        </h2>
+                    </div>
+                    <div className="flex flex-wrap justify-center gap-8 mb-20">
+                        {plans.map((plan) => (
+                            <PricingCard key={plan.title} plan={plan} onClick={setSelectedPlan}/>
+                        ))}
+                    </div>
+                </section>
 
-
-                <div className="flex flex-wrap justify-center gap-8 mb-20">
-                    {plans.map((plan) => (
-                        <PricingCard key={plan.title} plan={plan} onClick={setSelectedPlan} />
-                    ))}
-                </div>
                 {/*<div className="mb-10">*/}
                 {/*    <h2 className="title-head text-center">More <span>Informations</span></h2>*/}
                 {/*</div>*/}
@@ -323,17 +351,17 @@ export default function Home() {
                                 </div>
 
                                 {/*<div className="col-sm-4 col-md-2">*/}
-                            {/*    <h4>Our Company</h4>*/}
-                            {/*    <div className="menu">*/}
-                            {/*        <ul>*/}
-                            {/*            <li><Link href="/">Home</Link></li>*/}
-                            {/*            <li><Link href="/about">About</Link></li>*/}
-                            {/*            <li><Link href="/services">Services</Link></li>*/}
-                            {/*            <li><Link href="/pricing">Pricing</Link></li>*/}
-                            {/*            <li><Link href="/blog-right-sidebar">Blog</Link></li>*/}
-                            {/*            <li><Link href="/contact">Contact</Link></li>*/}
-                            {/*        </ul>*/}
-                            {/*    </div>*/}
+                                {/*    <h4>Our Company</h4>*/}
+                                {/*    <div className="menu">*/}
+                                {/*        <ul>*/}
+                                {/*            <li><Link href="/">Home</Link></li>*/}
+                                {/*            <li><Link href="/about">About</Link></li>*/}
+                                {/*            <li><Link href="/services">Services</Link></li>*/}
+                                {/*            <li><Link href="/pricing">Pricing</Link></li>*/}
+                                {/*            <li><Link href="/blog-right-sidebar">Blog</Link></li>*/}
+                                {/*            <li><Link href="/contact">Contact</Link></li>*/}
+                                {/*        </ul>*/}
+                                {/*    </div>*/}
                             {/*</div>*/}
                             {/*<div className="col-sm-4 col-md-2">*/}
                             {/*    <h4>Help & Support</h4>*/}

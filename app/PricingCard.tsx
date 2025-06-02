@@ -18,7 +18,7 @@ const TermsModal = ({ isOpen, onClose, selectedPlan }) => {
 
     return (
         <div className="fixed inset-0 bg-black/100 backdrop-blur-md z-50 flex items-center justify-center px-4">
-            <div className="bg-[#1D1D1D] max-w-[1360px] text-white w-full max-w-screen-2xl max-h-[90vh] p-10 rounded-2xl shadow-2xl  relative">
+            <div className="bg-[#1D1D1D] max-w-[1160px] text-white w-full max-w-screen-2xl max-h-[105vh] p-10 rounded-2xl shadow-2xl  relative">
 
                 <p className="text-2xl mb-6 text-gray-300">
                     <strong>Plan:</strong> {selectedPlan.planTitle}<br />
@@ -69,8 +69,10 @@ const TermsModal = ({ isOpen, onClose, selectedPlan }) => {
                 <div className="mb-6">
                     <h4 className="text-lg font-semibold mb-2">Payment Info</h4>
                     <p className="text-gray-300">Bank Transfer: <span className="text-yellow-400">---------------------------</span></p>
-                    {/*<p className="text-gray-300">PayPal: <span className="text-yellow-400">payments@yourdomain.com</span></p>*/}
-                    {/*<p className="text-gray-300">Crypto Wallet: <span className="text-yellow-400">0xABC123...789XYZ</span></p>*/}
+                    <p className="text-gray-300">PayPal: <span className="text-yellow-400">payments@yourdomain.com</span></p>
+                    <p className="text-gray-300">Crypto Wallet: <span className="text-yellow-400">0xABC123...789XYZ</span></p>
+                    <p className="text-gray-300">PayPal: <span className="text-yellow-400">payments@yourdomain.com</span></p>
+                    <p className="text-gray-300">Crypto Wallet: <span className="text-yellow-400">0xABC123...789XYZ</span></p>
                 </div>
 
                 {/*/!* Checkbox *!/*/}
