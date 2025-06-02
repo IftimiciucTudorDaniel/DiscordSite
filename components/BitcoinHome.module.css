@@ -1,194 +1,125 @@
 /* BitcoinHome.module.css */
 
 .bitcoinHomeWrapper {
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    background-color: #111111;
     position: relative;
+    width: 100%;
+    height: 60vh; /* Or a fixed height if preferred, but 100vh for full-screen hero */
+    overflow: hidden;
+    display: flex; /* Use flex to align content within the wrapper */
+    flex-direction: column; /* Stack logo and carousel vertically */
+    justify-content: flex-start; /* Align content to the start (top) */
 }
 
-/* Carousel */
+.logo {
+    position: absolute; /* Position absolutely to break it out of the carousel flow */
+    top: 20px; /* Adjust top padding */
+    left: -10px; /* Adjust left padding for mobile */
+    z-index: 10; /* Ensure logo is above the carousel */
+}
+
+/* For larger screens, you might want to increase the left padding */
+@media (min-width: 768px) { /* Tailwind's 'md' breakpoint */
+    .logo {
+        left: 50px; /* More padding on desktop */
+    }
+}
+
 .carousel {
+    flex-grow: 1; /* Allow carousel to take remaining vertical space */
     position: relative;
-    overflow: hidden;
-    height: 500px;
+    width: 100%;
+    height: 100%; /* Fill the remaining height of the wrapper */
 }
 
 .slide {
-    display: none;
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background-position: center center;
     background-size: cover;
-    transition: opacity 0.5s ease-in-out;
+    background-position: center;
+    transition: opacity 0.8s ease-in-out;
+    opacity: 0;
 }
 
 .slide.active {
-    display: block;
     opacity: 1;
-    position: relative;
 }
 
 .sliderContent {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100%;
-    padding-left: 8rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%; /* Take full width */
+    padding-left: 20px; /* Default left padding for mobile */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    color: white; /* Ensure text is visible */
+}
+
+/* For larger screens, adjust content padding */
+@media (min-width: 768px) {
+    .slide {
+        padding: 0 50px;
+    }
+    .sliderContent {
+        max-width: 700px;
+        padding-top: 20vh; /* Potentially more space on desktop */
+    }
+}
+
+.sliderText {
+    padding: 20px;
 }
 
 .slideTitle {
-    margin-bottom: 150px;
-    font-size: 6rem;
-    font-weight: bold;
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 10px;
+    font-size: 3rem; /* Adjust base font size for mobile, e.g., 48px */
+    line-height: 1.1; /* Tighter line height */
+    text-align: left; /* Ensure text is left-aligned */
+    /* text-8xl from inline style in component is too large for mobile */
 }
 
-.slideTitle {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-top: 15px;
+@media (min-width: 640px) { /* Tailwind's 'sm' breakpoint */
+    .slideTitle {
+        font-size: 4rem; /* Larger on small tablets */
+    }
 }
 
-.slideTitle span {
-    color: #f78f1e; /* accent orange */
+@media (min-width: 768px) { /* Tailwind's 'md' breakpoint */
+    .slideTitle {
+        font-size: 5rem; /* Larger on medium desktops */
+    }
 }
 
-.sliderBtn {
-    display: inline-block;
-    padding: 10px 25px;
-    background-color: #f78f1e;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 3px;
-    box-shadow: 0 3px 8px rgba(247,143,30,0.6);
-    transition: background-color 0.3s ease;
+@media (min-width: 1024px) { /* Tailwind's 'lg' breakpoint */
+    .slideTitle {
+        font-size: 6rem; /* Even larger on large desktops */
+    }
 }
 
-.sliderBtn:hover {
-    background-color: #e26b00;
-}
-
-/* Carousel Controls */
+/* Controls */
 .leftControl,
 .rightControl {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     color: white;
-    font-size: 3rem;
-    font-weight: 700;
-    text-decoration: none;
-    width: 50px;
-    height: 50px;
-    background: rgba(0,0,0,0.4);
+    font-size: 2rem;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
-    user-select: none;
     z-index: 10;
-    transition: background 0.3s ease;
-}
-
-.leftControl:hover,
-.rightControl:hover {
-    background: rgba(0,0,0,0.7);
 }
 
 .leftControl {
-    left: 20px;
+    left: 10px;
 }
 
 .rightControl {
-    right: 20px;
+    right: 10px;
 }
 
 .arrow {
-    pointer-events: none;
-    user-select: none;
-}
-
-/* Features Section */
-.featuresSection {
-    background: #fff;
-    padding: 60px 0;
-}
-
-.container {
-    width: 90%;
-    max-width: 1140px;
-    margin: 0 auto;
-}
-
-.featuresRow {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.featureBox {
-    flex: 1 1 30%;
-    min-width: 280px;
-    text-align: center;
-    padding: 20px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    border-radius: 6px;
-    background: #fafafa;
-    transition: box-shadow 0.3s ease;
-}
-
-.featureBox:hover {
-    box-shadow: 0 0 25px rgba(247,143,30,0.5);
-}
-
-.featureIcon {
     display: block;
-    margin-bottom: 15px;
-}
-
-.featureBoxContent h3 {
-    font-size: 1.5rem;
-    color: #f78f1e;
-    margin-bottom: 10px;
-    font-weight: 700;
-}
-
-.featureBoxContent p {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.4;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .featuresRow {
-        flex-direction: column;
-    }
-    .featureBox {
-        min-width: auto;
-        width: 100%;
-    }
-    .slideTitle {
-        font-size: 1.8rem;
-    }
-}
-.logo {
-    position: absolute;
-    top: 0px;
-    left: 50px;
-    z-index: 10;
-    cursor: pointer;
-}
-
-.logo img {
-    display: block;
-    max-width: 100%;
-    height: auto;
 }

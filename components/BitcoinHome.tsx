@@ -1,38 +1,33 @@
 import React, { useState } from "react";
 import styles from "./BitcoinHome.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const slides = [
     {
         id: 0,
+        // Simplified title structure to allow CSS module to control appearance
         title: (
-            <div className="text-8xl">
-                <h3 className="service-box-content">
-                    IDW Academy<br/>
-                    Learning
-                </h3>
-            </div>
+            <>
+                IDW Academy<br />
+                Learning
+            </>
         ),
-        buttonText: "Learn more",
-        buttonLink: "/about",
+
         backgroundImage: "/images/2.jpg",
     },
     {
         id: 1,
         title: (
-            <div className="text-8xl">
-                <h3 className="service-box-content">
-                    IDW Academy<br/>
-                    Learning
-                </h3>
-            </div>
+            <>
+                IDW Academy<br />
+                Learning
+            </>
         ),
-        buttonText: "Our prices",
         buttonLink: "/pricing",
         backgroundImage: "/images/3.jpg",
     },
 ];
-
 const BitcoinHome = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const totalSlides = slides.length;
@@ -47,8 +42,9 @@ const BitcoinHome = () => {
         setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
     };
 
-    return (
+    const currentSlideData = slides[currentSlide]; // Get current slide data
 
+    return (
         <div className={styles.bitcoinHomeWrapper}>
             <div className={styles.logo}>
                 <Image src="/images/print.svg" alt="Logo" width={200} height={40} />
@@ -74,9 +70,18 @@ const BitcoinHome = () => {
                     <span className={styles.arrow}>&#10095;</span>
                 </a>
             </div>
+            {/* Dots navigation - optional but good for usability */}
+            <div className={styles.dotsContainer}>
+                {slides.map((_, idx) => (
+                    <span
+                        key={idx}
+                        className={`${styles.dot} ${idx === currentSlide ? styles.activeDot : ''}`}
+                        onClick={() => setCurrentSlide(idx)}
+                    ></span>
+                ))}
+            </div>
         </div>
     );
 };
 
 export default BitcoinHome;
-
