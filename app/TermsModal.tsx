@@ -43,7 +43,7 @@ const TermsModal = ({ isOpen, onClose, selectedPlan }) => {
                     </p>
                     <h4 className="text-lg sm:text-xl font-semibold mb-2 text-white">2. Payment Methods</h4>
                     <p className="mb-4">
-                        2.1. Payments must be made through approved methods as listed on the academy's website.
+                        2.1. Payments must be made through approved methods as listed on the academys website.
                         <br/>
                         2.2. IWM Academy accepts various payment methods, including credit card, PayPal, and bank transfer, subject to processing fees.
                     </p>
