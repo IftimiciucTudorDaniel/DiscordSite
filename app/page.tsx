@@ -70,7 +70,7 @@ export default function Home() {
     ];
     const plans = [
         {
-            title: "Small Cap Academy",
+            title: "Small Cap <br/> Academy",
             prices: {
                 "1month": {
                     price: 1560,
@@ -106,7 +106,7 @@ export default function Home() {
             features: ["Advanced Small Cap Strategies", "Mentorship Access"],
         },
         {
-            title: "200k group Academy",
+            title: "200k group <br/>Academy",
             prices: {
                 "1month": {
                     price: 1560,

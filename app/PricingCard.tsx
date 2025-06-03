@@ -28,7 +28,8 @@ const PricingCard = ({ plan }) => {
                     </div>
                 )}
 
-                <h3 className="text-6xl font-extrabold mb-4 text-white">{plan.title}</h3>
+                <div className="text-6xl font-extrabold mb-4 text-white" dangerouslySetInnerHTML={{__html:plan.title}} />
+                {/*<h3 className="text-6xl font-extrabold mb-4 text-white">{plan.title}</h3>*/}
 
                 <div className="flex gap-3 mb-6">
                     {Object.keys(plan.prices).map((duration) => (
