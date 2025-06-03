@@ -215,7 +215,7 @@ export default function Home() {
                                 {services.map((service, index) => (
                                     <div className="col-md-6 mb-4" key={index}>
                                         <div className="h-100 d-flex flex-column service-box">
-                                            <div className="service-box-content flex-grow-1">
+                                            <div className="service-box-content flex-grow-1 min-h-[280px]">
                                                 <h3>{service.title}</h3>
                                                 <p>{service.text}</p>
                                             </div>
