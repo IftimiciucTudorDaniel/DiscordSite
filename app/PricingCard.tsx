@@ -1,9 +1,15 @@
 import { useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
-import TermsModal from "./TermsModal"; // make sure you import correctly
+import TermsModal from "./TermsModal";
 
 const PricingCard = ({ plan }) => {
-    const [selectedDuration, setSelectedDuration] = useState("1month");
+    // ia prima cheie disponibilă din prices ca default
+    const [selectedDuration, setSelectedDuration] = useState(() => {
+        const durations = Object.keys(plan.prices);
+        // dacă există "1month" → selectează-l, altfel ia primul din listă
+        return durations.includes("1month") ? "1month" : durations[0];
+    });
+
     const [showModal, setShowModal] = useState(false);
     const [selectedPlanData, setSelectedPlanData] = useState(null);
 
@@ -28,9 +34,12 @@ const PricingCard = ({ plan }) => {
                     </div>
                 )}
 
-                <div className="text-6xl font-extrabold mb-4 text-white" dangerouslySetInnerHTML={{__html:plan.title}} />
-                {/*<h3 className="text-6xl font-extrabold mb-4 text-white">{plan.title}</h3>*/}
+                <div
+                    className="text-6xl font-extrabold mb-4 text-white"
+                    dangerouslySetInnerHTML={{ __html: plan.title }}
+                />
 
+                {/* Durations */}
                 <div className="flex gap-3 mb-6">
                     {Object.keys(plan.prices).map((duration) => (
                         <button
@@ -55,12 +64,16 @@ const PricingCard = ({ plan }) => {
                     )}
                     <span className="text-5xl font-bold">
                         ${selected?.price}
-                        <span className="text-xl font-normal ml-1">/ {selectedDuration.replace("month", "mo")}</span>
+                        <span className="text-xl font-normal ml-1">
+                            / {selectedDuration.replace("month", "mo")}
+                        </span>
                     </span>
                 </div>
 
                 {plan.subtitle && (
-                    <p className="text-base text-yellow-400 font-semibold mb-5">{plan.subtitle}</p>
+                    <p className="text-base text-yellow-400 font-semibold mb-5">
+                        {plan.subtitle}
+                    </p>
                 )}
 
                 <ul className="space-y-3 text-2xl text-left mb-8">

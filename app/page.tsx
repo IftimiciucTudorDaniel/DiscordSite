@@ -70,7 +70,7 @@ export default function Home() {
     ];
     const plans = [
         {
-            title: "Small Cap <br/> Academy",
+            title: "SMALL CAP <br/> ACADEMY",
             prices: {
                 "1month": {
                     price: 1560,
@@ -88,7 +88,7 @@ export default function Home() {
             features: ["Advanced Small Cap Strategies", "Mentorship Access"],
         },
         {
-            title: "TOUGH MARKET Academy",
+            title: "TOUGH MARKET ACADEMY",
             prices: {
                 "1month": {
                     price: 1656,
@@ -106,7 +106,7 @@ export default function Home() {
             features: ["Advanced Small Cap Strategies", "Mentorship Access"],
         },
         {
-            title: "200k group <br/>Academy",
+            title: "200k GROUP <br/>ACADAMY",
             prices: {
                 "1month": {
                     price: 1560,
@@ -124,12 +124,8 @@ export default function Home() {
             features: ["Advanced Small Cap Strategies", "Mentorship Access"],
         },
         {
-            title: "EARNINGS GROUP academy",
+            title: "EARNINGS GROUP ACADEMY",
             prices: {
-                "1month": {
-                    price: 1290,
-                    priceId: "price_1month_smallcap",
-                },
                 "6months": {
                     price: 7200,
                     priceId: "price_6months_smallcap",
@@ -141,7 +137,6 @@ export default function Home() {
             },
             features: ["Advanced Small Cap Strategies", "Mentorship Access"],
         },
-
     ];
 
     if (loading) {
@@ -284,8 +279,8 @@ export default function Home() {
                     <div className="row justify-content-center text-center">
                         <div className="col-12 mb-2">
                             <p className="mb-1">
-                                <a href="mailto:contact@website.com" className="text-white hover:underline">
-                                    contact@website.com
+                                <a  className="text-white hover:underline">
+                                    infiniteworldmarkets@outlook.com
                                 </a>
                             </p>
                             <p className="mb-1">

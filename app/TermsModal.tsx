@@ -1,7 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { FaRegCopy } from "react-icons/fa";
 
 const TermsModal = ({ isOpen, onClose, selectedPlan }) => {
+    const [activeTab, setActiveTab] = useState('banking');
+    const [privacyPolicyAccepted, setPrivacyPolicyAccepted] = useState(false);
+
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = "hidden";
@@ -25,6 +28,40 @@ const TermsModal = ({ isOpen, onClose, selectedPlan }) => {
 
     const regex = /(<([^>]+)>)/gi;
     const cleanedTitle = selectedPlan.planTitle.replace(regex, "");
+
+    // Payment links mapping
+    const paymentLinks = {
+        "SMALL CAP  ACADEMY": {
+            "1month": "https://checkout.revolut.com/pay/e7a7e225-729c-4d3b-83e5-4da6ebcd30eb",
+            "6months": "https://checkout.revolut.com/pay/59983397-50f0-42e0-850f-be10bde8894f",
+            "1year": "https://checkout.revolut.com/pay/7d1a8cd0-728a-416e-9caa-68b34246f5de"
+        },
+        "TOUGH MARKET ACADEMY": {
+            "1month": "https://checkout.revolut.com/pay/5ee74973-2d4c-410e-8f2a-321715127dad",
+            "6months": "https://checkout.revolut.com/pay/802b64a7-f774-4c9e-a135-74222e7ee1e3",
+            "1year": "https://checkout.revolut.com/pay/5dd694a3-f9b7-49d2-861a-1d2e2c50576c"
+        },
+        "200k GROUP ACADAMY": {
+            "1month": "https://checkout.revolut.com/pay/3073153d-a9e7-42d1-877f-f42211f13bbf",
+            "6months": "https://checkout.revolut.com/pay/26bf1d23-06da-4fb2-af55-6f40c5eecb87",
+            "1year": "https://checkout.revolut.com/pay/353739ba-75eb-40de-8e93-f3bfd059a449"
+        },
+        "EARNINGS GROUP ACADEMY": {
+            "1month": null, // No link available
+            "6months": "https://checkout.revolut.com/pay/c06aa86d-a3a2-472c-8dc7-d8fd908ca79c",
+            "1year": "https://checkout.revolut.com/pay/6c6a8155-3a4c-42e7-87c3-b105114dad90"
+        }
+    };
+
+    const getPaymentLink = () => {
+        const planName = cleanedTitle;
+        const duration = selectedPlan.duration;
+
+        if (paymentLinks[planName] && paymentLinks[planName][duration]) {
+            return paymentLinks[planName][duration];
+        }
+        return null;
+    };
 
     const PaymentItem = ({ label, value }) => (
         <p className="text-gray-300 flex items-center gap-2 text-xl">
@@ -84,18 +121,79 @@ const TermsModal = ({ isOpen, onClose, selectedPlan }) => {
                     <h3 className="text-xl font-semibold mb-2 text-white">6.Agreement to Terms</h3>
                     <p>
                         6.1. By accessing and utilizing the services of IWM Academy, you agree to adhere to the terms and conditions outlined in this Agreement.
-                        6.2. IWM Academy reserves the right to modify these terms at any time, and such changes will be effective upon being posted on the website.
+                        6.2. IWM Academy reserves the right to modify these terms at any time, and such changes will be effective upon being posted on the website.
                     </p>
                 </div>
 
+                {/* Privacy Policy Checkbox */}
+                <div className="mb-6 mt-4">
+                    <label className="flex items-center gap-3 cursor-pointer">
+                        <input
+                            type="checkbox"
+                            checked={privacyPolicyAccepted}
+                            onChange={(e) => setPrivacyPolicyAccepted(e.target.checked)}
+                            className="w-5 h-5 text-yellow-400 bg-gray-700 border-gray-600 rounded focus:ring-yellow-400 focus:ring-2"
+                        />
+                        <span className="text-gray-300 text-lg">
+                            I have read and agree to the terms and conditions and privacy policy
+                        </span>
+                    </label>
+                </div>
 
+                {/* Tabs */}
                 <div className="mb-6">
-                    <h4 className="text-lg font-semibold mb-2">Payment Info</h4>
-                    <PaymentItem label="Recipient" value="INFINITE WORLD MARKETS LTD" />
-                    <PaymentItem label="Currency accepted" value="USD" />
-                    <PaymentItem label="IBAN" value="GB60REVO00996968262730" />
-                    <PaymentItem label="BIC" value="REVOGB21" />
-                    <PaymentItem label="Intermediary BIC" value="CHASGB2L" />
+                    <div className="flex rounded-t-lg overflow-hidden border-b-2 border-gray-700">
+                        <button
+                            onClick={() => setActiveTab("banking")}
+                            className={`px-6 py-3 text-lg font-medium transition-all
+        border-r border-gray-700
+        ${activeTab === "banking"
+                                ? "bg-[#2b2b2b] text-yellow-400 border-b-2 border-yellow-400"
+                                : "bg-transparent text-gray-300 hover:bg-[#2b2b2b] hover:text-white"
+                            }`}
+                        >
+                            Banking Information
+                        </button>
+
+                        <button
+                            onClick={() => {
+                                if (!privacyPolicyAccepted) return;
+                                const paymentLink = getPaymentLink();
+                                if (paymentLink) {
+                                    window.open(paymentLink, "_blank");
+                                    setActiveTab("online");
+                                } else {
+                                    alert("Online payment is not available for this plan. Please use banking information.");
+                                }
+                            }}
+                            disabled={!privacyPolicyAccepted}
+                            className={`px-6 py-3 text-lg font-medium transition-all bg-transparent
+    ${!privacyPolicyAccepted
+                                ? "text-gray-500 cursor-not-allowed disabled:bg-transparent disabled:text-gray-500 disabled:border-none"
+                                : getPaymentLink()
+                                    ? "hover:bg-[#2b2b2b] hover:text-white text-gray-300"
+                                    : "text-gray-500 cursor-not-allowed"
+                            }
+    ${activeTab === "online" && privacyPolicyAccepted
+                                ? "bg-[#2b2b2b] text-yellow-400 border-b-2 border-yellow-400"
+                                : ""
+                            }`}
+                        >
+                            Online Payment
+                        </button>
+
+                    </div>
+
+                <div className="pt-6">
+                        <div>
+                            <h4 className="text-lg font-semibold mb-4">Banking Information</h4>
+                            <PaymentItem label="Recipient" value="INFINITE WORLD MARKETS LTD" />
+                            <PaymentItem label="Currency accepted" value="USD" />
+                            <PaymentItem label="IBAN" value="GB60REVO00996968262730" />
+                            <PaymentItem label="BIC" value="REVOGB21" />
+                            <PaymentItem label="Intermediary BIC" value="CHASGB2L" />
+                        </div>
+                    </div>
                 </div>
 
                 <div className="flex justify-end gap-4 mt-3">
@@ -103,16 +201,8 @@ const TermsModal = ({ isOpen, onClose, selectedPlan }) => {
                         onClick={onClose}
                         className="px-6 py-3 border border-gray-500 text-lg rounded-lg text-white hover:bg-gray-700 transition font-medium"
                     >
-                        Cancel
+                        Close
                     </button>
-                    {/*<button*/}
-                    {/*    onClick={() => {*/}
-                    {/*        onClose();*/}
-                    {/*    }}*/}
-                    {/*    className="px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-lg font-bold rounded-lg text-black transition"*/}
-                    {/*>*/}
-                    {/*    Confirm Order*/}
-                    {/*</button>*/}
                 </div>
             </div>
         </div>
