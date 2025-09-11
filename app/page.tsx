@@ -266,6 +266,9 @@ export default function Home() {
                     <div className="mb-10">
                         <h2 className="title-head text-center">Package <span className="text-orange-500">Pricing</span>
                         </h2>
+                        <p className="text-2xl sm:text-2xl mt-5 text-center">
+                            Commence payment for all four groups for a year, and receive six months of complimentary access as an additional benefit.
+                        </p>
                     </div>
                     <div className="flex flex-wrap justify-center gap-8 mb-20">
                         {plans.map((plan) => (
