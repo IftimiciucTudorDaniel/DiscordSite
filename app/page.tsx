@@ -135,7 +135,7 @@ export default function Home() {
                     priceId: "price_6months_smallcap",
                 },
                 "1year": {
-                    price: 15000,
+                    price: 14000,
                     priceId: "price_1year_smallcap",
                 },
             },
