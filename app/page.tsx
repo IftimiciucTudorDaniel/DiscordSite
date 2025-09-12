@@ -199,7 +199,7 @@ export default function Home() {
                         <div className="row text-center mb-10">
                             <h2 className="title-head">About <span>Us</span></h2>
                             <div className="title-head-subtitle">
-                                <p>Discover the perfect timing for buying and selling in U.S. markets with IWM Academy's expert guidance, and transform your path into a journey of investment mastery and dynamic growth!
+                                <p>Discover the perfect timing for buying and selling in U.S. markets with IWM Academy expert guidance, and transform your path into a journey of investment mastery and dynamic growth!
                                 </p>
                             </div>
                         </div>
