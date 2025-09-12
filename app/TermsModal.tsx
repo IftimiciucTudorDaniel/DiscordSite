@@ -119,7 +119,7 @@ const TermsModal = ({ isOpen, onClose, selectedPlan }) => {
                             }
                             className="w-5 h-5 accent-yellow-400 rounded"
                         />
-                        <span className="text-gray-300 text-base">
+                        <span className="text-gray-300 text-base size-11/12">
                             I agree to the{" "}
                             <span className="text-yellow-400 underline">
                                 terms & privacy policy

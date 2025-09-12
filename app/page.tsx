@@ -199,9 +199,7 @@ export default function Home() {
                         <div className="row text-center mb-10">
                             <h2 className="title-head">About <span>Us</span></h2>
                             <div className="title-head-subtitle">
-                                <p>IWM Academy provides a comprehensive, insightful pathway for mastering the art of
-                                    business growth investing. Learn to navigate this dynamic field the right way with
-                                    these focused steps:
+                                <p>Discover the perfect timing for buying and selling in U.S. markets with IWM Academy's expert guidance, and transform your path into a journey of investment mastery and dynamic growth!
                                 </p>
                             </div>
                         </div>
@@ -229,33 +227,23 @@ export default function Home() {
                                 {/* Changed from text-5xl to text-6xl for mobile */}
                                 About <span className="text-orange-500">Platform</span>
                             </h2>
-                            <p className="text-2xl sm:text-xl mt-5">
+                            <p className="text-2xl sm:text-2xl mt-5">
                                 {/* Changed from text-xl to text-2xl for mobile */}
-                                IWM Academy private network
+                                Master the art of pinpointing perfect buy and sell moments in U.S. markets with IWM Academy!
                             </p>
-                            <div className="flex justify-center">
+                            <div className="flex text-left">
                                 <p className="mt-10 px-4 md:px-0 max-w-8xl text-3xl sm:text-3xl lg:text-3xl max-w-8xl leading-relaxed">
                                     {/* Changed from text-lg to text-xl for mobile */}
-                                    Welcome to the IWM Academy private network, a thriving community where ambition
-                                    meets opportunity! Connect and collaborate with fellow members who are avid
-                                    learners, successful entrepreneurs, and savvy investors. Experience the power of
-                                    collective knowledge and innovation as you engage with individuals who are not just
-                                    getting educated but mastering the art of smart business growth and investment
-                                    strategies. Dive into interactive sessions, share insights, and harness the energy
-                                    of a network committed to success and lifelong learning. Join us on this exciting
-                                    journey and be part of a dynamic community thats transforming potential
-                                    into&nbsp;prosperity!
-                              <br/><br/>
-                                    Unlock exclusive access to the IWM Academy by joining us through Patreon! Discover a
-                                    world where learning meets limitless possibilities within our vibrant private
-                                    network. As a valued member, youll enjoy a sneak peek into this exciting community,
-                                    where you can seamlessly interact with passionate individuals who are on their
-                                    journeys toward success. Engage in enlightening conversations, exchange valuable
-                                    insights, and witness firsthand the diverse paths of our members. With the freedom
-                                    to explore various groups, youll have the opportunity to find the perfect fit for
-                                    your goals, paving the way for personal and professional growth. Join us today for
-                                    an inspiring experience, and be part of a network that empowers you to choose your
-                                    path&nbsp;to&nbsp;greatness!
+                                    IWM Academy is your gateway to mastering the intricate world of investing. Imagine stepping onto a path lined with wisdom and guided by seasoned investors who have tread this terrain before you. Here, you’ll learn not only the mechanics of investing but also the art of growing your wealth with confidence and foresight.
+                                    <br/><br/>
+                                    Picture this: you’re not just getting a list of stocks to buy or sell; you’re receiving a treasure map, marked with precise points of opportunity on the volatile seas of the stock market. IWM Academy delves into the heart of Nasdaq and the New York Stock Exchange, unearthing insights that transform uncertainty into clarity.
+                                    <br/><br/>
+                                    Our mission is to elevate you financially, helping you build a life based not just on survival but thriving. We aim to empower you with deep knowledge of company dynamics, showing you how, when, and why to invest, turning complex decisions into an enlightening journey.
+                                    <br/><br/>
+                                    Within our community, you’ll find more than just fellow learners. You’ll meet a diverse group of individuals with high potential, each transforming their financial narratives into stories of success. Here, you’ll learn to mitigate your risks, discovering strategies to minimize losses and expand your portfolio in ways that maximize profitability.
+                                    <br/><br/>
+                                    IWM Academy is not just a place; it’s a movement towards financial freedom. Whether you’re a beginner or a seasoned investor, we provide the tools and connections you need to enrich your life and build lasting wealth. Join us, and let’s rewrite your financial story together. 
+                                    <br/>
                                 </p>
                             </div>
                         </div>

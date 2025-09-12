@@ -1,33 +1,34 @@
 import React, { useState } from "react";
 import styles from "./BitcoinHome.module.css";
 import Image from "next/image";
-import Link from "next/link";
 
 const slides = [
     {
         id: 0,
-        // Simplified title structure to allow CSS module to control appearance
         title: (
             <>
                 IWM Academy<br />
-                Learning
+                <p>
+                    Master the art of pinpointing perfect buy and sell moments in U.S.
+                    markets with IWM Academy!
+                </p>
             </>
         ),
-
-        backgroundImage: "/images/2.jpg",
+        video: "/images/vids.mp4", // 👈 în loc de backgroundImage
     },
     {
         id: 1,
         title: (
             <>
                 IWM Academy<br />
-                Learning
+                Learning2
             </>
         ),
         buttonLink: "/pricing",
-        backgroundImage: "/images/3.jpg",
+        backgroundImage: "/images/3.jpg", // 👈 slide normal cu imagine
     },
 ];
+
 const BitcoinHome = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const totalSlides = slides.length;
@@ -42,20 +43,38 @@ const BitcoinHome = () => {
         setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
     };
 
-    const currentSlideData = slides[currentSlide]; // Get current slide data
-
     return (
         <div className={styles.bitcoinHomeWrapper}>
             <div className={styles.logo}>
                 <Image src="/images/print.svg" alt="Logo" width={200} height={40} />
             </div>
+
             <div className={styles.carousel}>
                 {slides.map((slide, index) => (
                     <div
                         key={slide.id}
-                        className={`${styles.slide} ${index === currentSlide ? styles.active : ""}`}
-                        style={{ backgroundImage: `url(${slide.backgroundImage})` }}
+                        className={`${styles.slide} ${
+                            index === currentSlide ? styles.active : ""
+                        }`}
                     >
+                        {/* Dacă e video */}
+                        {slide.video ? (
+                            <video
+                                className={styles.bgVideo}
+                                src={slide.video}
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                            />
+                        ) : (
+                            // Dacă e imagine
+                            <div
+                                className={styles.bgImage}
+                                style={{ backgroundImage: `url(${slide.backgroundImage})` }}
+                            />
+                        )}
+
                         <div className={styles.sliderContent}>
                             <div className={styles.sliderText}>
                                 <h3 className={styles.slideTitle}>{slide.title}</h3>
@@ -63,19 +82,34 @@ const BitcoinHome = () => {
                         </div>
                     </div>
                 ))}
-                <a href="#" className={styles.leftControl} role="button" onClick={goToPrev}>
+
+                {/* Controls */}
+                <a
+                    href="#"
+                    className={styles.leftControl}
+                    role="button"
+                    onClick={goToPrev}
+                >
                     <span className={styles.arrow}>&#10094;</span>
                 </a>
-                <a href="#" className={styles.rightControl} role="button" onClick={goToNext}>
+                <a
+                    href="#"
+                    className={styles.rightControl}
+                    role="button"
+                    onClick={goToNext}
+                >
                     <span className={styles.arrow}>&#10095;</span>
                 </a>
             </div>
-            {/* Dots navigation - optional but good for usability */}
+
+            {/* Dots navigation */}
             <div className={styles.dotsContainer}>
                 {slides.map((_, idx) => (
                     <span
                         key={idx}
-                        className={`${styles.dot} ${idx === currentSlide ? styles.activeDot : ''}`}
+                        className={`${styles.dot} ${
+                            idx === currentSlide ? styles.activeDot : ""
+                        }`}
                         onClick={() => setCurrentSlide(idx)}
                     ></span>
                 ))}
