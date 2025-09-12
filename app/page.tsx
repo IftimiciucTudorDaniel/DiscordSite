@@ -150,7 +150,13 @@ export default function Home() {
                 <main><BitcoinHome/></main>
                 <section className="features py-5">
                     <div className="container">
-                        <div className="row features-row">
+                        <div className="row features-row text-center">
+                            <div className="row text-center mb-10">
+                                <h2 className="title-head">IWM <span>Academy</span></h2>
+                                <div className="title-head-subtitle">
+                                    <p className="text-white">Master the art of pinpointing perfect buy and sell moments in U.S. markets with IWM Academy! </p>
+                                </div>
+                            </div>
                             <div className="feature-box col-lg-4 col-md-6 custom-col">
                                 <span className="feature-icon d-block text-center mb-3">
                                   <Image src="/images/icons/orange/buy-sell4.jpg" alt="" width={60} height={60}/>
@@ -227,10 +233,7 @@ export default function Home() {
                                 {/* Changed from text-5xl to text-6xl for mobile */}
                                 About <span className="text-orange-500">Platform</span>
                             </h2>
-                            <p className="text-2xl sm:text-2xl mt-5">
-                                {/* Changed from text-xl to text-2xl for mobile */}
-                                Master the art of pinpointing perfect buy and sell moments in U.S. markets with IWM Academy!
-                            </p>
+
                             <div className="flex text-left">
                                 <p className="mt-10 px-4 md:px-0 max-w-8xl text-3xl sm:text-3xl lg:text-3xl max-w-8xl leading-relaxed">
                                     {/* Changed from text-lg to text-xl for mobile */}

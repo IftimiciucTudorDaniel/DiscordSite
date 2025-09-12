@@ -5,25 +5,10 @@ import Image from "next/image";
 const slides = [
     {
         id: 0,
-        title: (
-            <>
-                IWM Academy<br />
-                <p>
-                    Master the art of pinpointing perfect buy and sell moments in U.S.
-                    markets with IWM Academy!
-                </p>
-            </>
-        ),
         video: "/images/vids.mp4", // 👈 în loc de backgroundImage
     },
     {
         id: 1,
-        title: (
-            <>
-                IWM Academy<br />
-                Learning2
-            </>
-        ),
         buttonLink: "/pricing",
         backgroundImage: "/images/3.jpg", // 👈 slide normal cu imagine
     },
@@ -74,12 +59,6 @@ const BitcoinHome = () => {
                                 style={{ backgroundImage: `url(${slide.backgroundImage})` }}
                             />
                         )}
-
-                        <div className={styles.sliderContent}>
-                            <div className={styles.sliderText}>
-                                <h3 className={styles.slideTitle}>{slide.title}</h3>
-                            </div>
-                        </div>
                     </div>
                 ))}
 

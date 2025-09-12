@@ -205,11 +205,12 @@ hr {
 }
 
 .title-head-subtitle p {
+  color: #fd961a;
   position: relative;
   display: inline-block;
   text-transform: uppercase;
   margin-bottom: 25px;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .title-head-subtitle p:before {
@@ -1261,7 +1262,7 @@ ul.nav.nav-tabs li a:hover, ul.nav.nav-tabs li.active a:hover {
 
 .features-row {
   background: #1d1d1d;
-  padding: 60px 50px 50px 50px;
+  padding: 30px 50px 50px 50px;
   margin-left: 0;
   margin-right: 0;
 }
