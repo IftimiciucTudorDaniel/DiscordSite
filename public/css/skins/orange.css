@@ -19,13 +19,13 @@ body.light .navbar-nav .fa-search:active,
 body.light .navbar-nav .fa-search:focus,
 ul.navbar-nav > li.active > a,
 .about-content ul.nav.nav-tabs li.active a,
-.dropdown-menu>.active>a, 
-.dropdown-menu>.active>a:hover, 
-.dropdown-menu>.active>a:focus, 
+.dropdown-menu>.active>a,
+.dropdown-menu>.active>a:hover,
+.dropdown-menu>.active>a:focus,
 .dropdown-menu>.active>.dropdown-menu>.active>a,
-.dropdown-menu li a:hover, 
+.dropdown-menu li a:hover,
 .dropdown-menu li a:focus,
-body.light .dropdown-menu>.active>a, 
+body.light .dropdown-menu>.active>a,
 .slider-text .slide-title span,
 #main-slide .carousel-control i,
 .feature .feature-icon,
@@ -57,10 +57,10 @@ h4.panel-title a,
 .facts .facts-content .heading-facts h2 span,
 .btn-primary.btn-pricing,
 .shop-cart .table .icon-delete-product:hover,
-.shop-cart .table .icon-delete-product:focus, 
+.shop-cart .table .icon-delete-product:focus,
 .shop-cart .table .icon-delete-product:active,
 body.light .shop-cart .table .icon-delete-product:hover,
-body.light .shop-cart .table .icon-delete-product:focus, 
+body.light .shop-cart .table .icon-delete-product:focus,
 body.light .shop-cart .table .icon-delete-product:active
 .shop-cart .btn.btn-primary.btn-coupon:hover,
 .shop-cart .btn.btn-primary.btn-coupon:focus,
@@ -94,7 +94,7 @@ ul.user li.sign-in a:hover,
 body.blog .pagination li.active a,
 .facts,
 .call-action-all .action-btn .btn-primary {
-  background: #fd961a;
+  background: url("../../images/test1.jpeg");
 }
 
 ul.user li.sign-in a:hover,
@@ -208,7 +208,7 @@ ul.user li.sign-in a.btn-primary:active {
 }
 
 @media (max-width : 767px) {
- 
+
   ul.navbar-nav > li.active, ul.navbar-nav > li:not(.search):hover {
     background: transparent;
   }
@@ -227,7 +227,7 @@ ul.user li.sign-in a.btn-primary:active {
 }
 
 @media (max-width : 570px) {
- 
+
   .about-content ul.nav.nav-tabs li.active a {
     color: #fff;
   }

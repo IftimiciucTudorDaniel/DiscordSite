@@ -5,12 +5,12 @@ import Image from "next/image";
 const slides = [
     {
         id: 0,
-        video: "/images/vids.mp4", // 👈 în loc de backgroundImage
+        video: "/images/vids.mp4",
     },
     {
         id: 1,
         buttonLink: "/pricing",
-        backgroundImage: "/images/3.jpg", // 👈 slide normal cu imagine
+        backgroundImage: "/images/3.jpg",
     },
 ];
 
@@ -31,7 +31,7 @@ const BitcoinHome = () => {
     return (
         <div className={styles.bitcoinHomeWrapper}>
             <div className={styles.logo}>
-                <Image src="/images/print.svg" alt="Logo" width={200} height={40} />
+                <Image src="/images/print2.svg" alt="Logo" width={200} height={40} />
             </div>
 
             <div className={styles.carousel}>

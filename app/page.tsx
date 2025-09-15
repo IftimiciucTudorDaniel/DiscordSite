@@ -154,8 +154,11 @@ export default function Home() {
                             <div className="row text-center mb-10">
                                 <h2 className="title-head">IWM <span>Academy</span></h2>
                                 <div className="title-head-subtitle">
-                                    <p className="text-white">Master the art of pinpointing perfect buy and sell moments in U.S. markets with IWM Academy! </p>
+                                    <p className="text-[#ffffff] bg-orange-500 px-4 py-2 rounded-lg inline-block">
+                                        <b>Master the art of pinpointing perfect buy and sell moments in U.S. markets with INFINITE WORLD MARKETS ACADEMY!</b>
+                                    </p>
                                 </div>
+
                             </div>
                             <div className="feature-box col-lg-4 col-md-6 custom-col">
                                 <span className="feature-icon d-block text-center mb-3">
@@ -205,7 +208,8 @@ export default function Home() {
                         <div className="row text-center mb-10">
                             <h2 className="title-head">About <span>Us</span></h2>
                             <div className="title-head-subtitle">
-                                <p>Discover the perfect timing for buying and selling in U.S. markets with IWM Academy expert guidance, and transform your path into a journey of investment mastery and dynamic growth!
+                                <p className="text-[#ffffff] bg-orange-500 px-4 py-2 rounded-lg inline-block">
+                                    <b>Discover the perfect timing for buying and selling in U.S. markets with INFINITE WORLD MARKETS ACADEMY Academy expert guidance, and transform your path into a journey of investment mastery and dynamic growth!</b>
                                 </p>
                             </div>
                         </div>
