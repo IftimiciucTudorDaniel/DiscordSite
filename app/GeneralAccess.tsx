@@ -75,7 +75,7 @@ export default function FreeAccessForm() {
                 7 Days Free General Access
             </h2>
             <p className="text-center text-lg text-gray-300 mb-8">
-                Fill out the form below to unlock your free trial to the IWM Academy platform.
+                Fill out the form below to unlock your free trial to the IWM Academy platform
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-5">
