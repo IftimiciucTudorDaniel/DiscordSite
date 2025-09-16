@@ -7,11 +7,6 @@ const slides = [
         id: 0,
         video: "/images/vids.mp4",
     },
-    {
-        id: 1,
-        buttonLink: "/pricing",
-        backgroundImage: "/images/3.jpg",
-    },
 ];
 
 const BitcoinHome = () => {
@@ -56,29 +51,14 @@ const BitcoinHome = () => {
                             // Dacă e imagine
                             <div
                                 className={styles.bgImage}
-                                style={{ backgroundImage: `url(${slide.backgroundImage})` }}
+                                style={{ backgroundImage: `url($})` }}
                             />
                         )}
                     </div>
                 ))}
 
                 {/* Controls */}
-                <a
-                    href="#"
-                    className={styles.leftControl}
-                    role="button"
-                    onClick={goToPrev}
-                >
-                    <span className={styles.arrow}>&#10094;</span>
-                </a>
-                <a
-                    href="#"
-                    className={styles.rightControl}
-                    role="button"
-                    onClick={goToNext}
-                >
-                    <span className={styles.arrow}>&#10095;</span>
-                </a>
+
             </div>
 
             {/* Dots navigation */}

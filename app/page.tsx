@@ -148,6 +148,7 @@ export default function Home() {
     // @ts-ignore
     return (
         <>
+
             <div className="wrapper">
                 <main><BitcoinHome/></main>
                 <section className="features py-5">
@@ -311,8 +312,6 @@ export default function Home() {
                 onClose={() => {setShowModal(false); document.body.classList.remove("modal-open");}}
                 selectedPlan={selectedPlanData}
             />
-
         </>
-
     );
 }
