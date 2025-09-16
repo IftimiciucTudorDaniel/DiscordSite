@@ -14,6 +14,8 @@ const stripePromise = loadStripe("pk_test_51MKLiAJXJISDpaiuaphCVhzrp3hkCkHUxyuNf
 import BitcoinHome from '../components/BitcoinHome';
 import { a } from "framer-motion/dist/types.d-CQt5spQA";
 import TermsModal from "./TermsModal";
+import FreeAccessForm from "./GeneralAccess";
+
 
 export default function Home() {
     const [loading, setLoading] = useState(true);
@@ -272,6 +274,19 @@ export default function Home() {
                     </div>
                 </section>
             </div>
+
+            <section
+                className="py-20 bg-cover bg-center relative"
+                style={{ backgroundImage: "url('/images/10.jpg')" }}
+            >
+                <div className="absolute inset-0 bg-black/60" />
+
+                <div className="relative z-10 container mx-auto max-w-[1200px] px-4">
+                    <FreeAccessForm />
+                </div>
+            </section>
+
+
             <div className="bottom-footer bg-black py-4 text-white">
                 <div className="container">
                     <div className="row justify-content-center text-center">
@@ -279,11 +294,6 @@ export default function Home() {
                             <p className="mb-1">
                                 <a  className="text-white hover:underline">
                                     infiniteworldmarkets@outlook.com
-                                </a>
-                            </p>
-                            <p className="mb-1">
-                                <a href="https://patreon.com/your-patreon-link" target="_blank" rel="noopener noreferrer" className="text-white hover:underline">
-                                    Support us on Patreon
                                 </a>
                             </p>
                         </div>
@@ -301,6 +311,7 @@ export default function Home() {
                 onClose={() => {setShowModal(false); document.body.classList.remove("modal-open");}}
                 selectedPlan={selectedPlanData}
             />
+
         </>
 
     );

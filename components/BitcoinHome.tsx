@@ -31,7 +31,7 @@ const BitcoinHome = () => {
     return (
         <div className={styles.bitcoinHomeWrapper}>
             <div className={styles.logo}>
-                <Image src="/images/print2.svg" alt="Logo" width={200} height={40} />
+                <Image src="/images/print_transparent.svg" alt="Logo" width={200} height={40} />
             </div>
 
             <div className={styles.carousel}>
