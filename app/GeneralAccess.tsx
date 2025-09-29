@@ -89,9 +89,11 @@ export default function FreeAccessForm() {
             <h2 className="text-4xl font-extrabold mb-6 text-center text-white">
                 10 Days Free General Access
             </h2>
-            <p className="text-center text-lg text-gray-300 mb-8">
+            <p className="text-center text-2xl text-orange-500 mb-0">
+                Before signing in, please ensure you have a Discord account and can access it either through the web version or by installing the app on your device.
+            </p> <br /><p>
                 Fill out the form below to unlock your free trial to the IWM Academy platform
-            </p>
+        </p>
 
             <form onSubmit={handleSubmit} className="space-y-5">
                 <input
