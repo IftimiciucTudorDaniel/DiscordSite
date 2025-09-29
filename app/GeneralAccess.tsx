@@ -91,7 +91,7 @@ export default function FreeAccessForm() {
             </h2>
             <p className="text-center text-2xl text-orange-500 mb-0">
                 Before signing in, please ensure you have a Discord account and can access it either through the web version or by installing the app on your device.
-            </p> <br /><p>
+            </p> <br /><p className="text-center">
                 Fill out the form below to unlock your free trial to the IWM Academy platform
         </p>
 
