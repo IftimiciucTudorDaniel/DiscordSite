@@ -155,10 +155,10 @@ export default function Home() {
                     <div className="container">
                         <div className="row features-row text-center">
                             <div className="row text-center mb-10">
-                                <h2 className="title-head">IWM <span>Academy</span></h2>
+                                <h2 className="title-head">IWM <span>Academy</span><p className="text-center text-xl-center text-white">Master your market emotions through the power of the right education.</p></h2>
                                 <div className="title-head-subtitle">
                                     <p className="text-[#ffffff] bg-orange-500 px-4 py-2 rounded-lg inline-block">
-                                        <b>Master the art of pinpointing perfect buy and sell moments in U.S. markets with INFINITE WORLD MARKETS ACADEMY!</b>
+                                        <b>Master the art of recognizing the perfect moments for learning and growth in U.S. markets with INFINITE WORLD MARKETS ACADEMY!</b>
                                     </p>
                                 </div>
 
@@ -212,7 +212,7 @@ export default function Home() {
                             <h2 className="title-head">About <span>Us</span></h2>
                             <div className="title-head-subtitle">
                                 <p className="text-[#ffffff] bg-orange-500 px-4 py-2 rounded-lg inline-block">
-                                    <b>Discover the perfect timing for buying and selling in U.S. markets with INFINITE WORLD MARKETS ACADEMY Academy expert guidance, and transform your path into a journey of investment mastery and dynamic growth!</b>
+                                    <b>Discover the perfect timing for learning and advancing in U.S. markets with INFINITE WORLD MARKETS ACADEMY Academy expert guidance, and transform your path into a journey of investment mastery and dynamic growth!</b>
                                 </p>
                             </div>
                         </div>
@@ -246,7 +246,7 @@ export default function Home() {
                                     {/* Changed from text-lg to text-xl for mobile */}
                                     IWM Academy is your gateway to mastering the intricate world of investing. Imagine stepping onto a path lined with wisdom and guided by seasoned investors who have tread this terrain before you. Here, you’ll learn not only the mechanics of investing but also the art of growing your wealth with confidence and foresight.
                                     <br/><br/>
-                                    Picture this: you’re not just getting a list of stocks to buy or sell; you’re receiving a treasure map, marked with precise points of opportunity on the volatile seas of the stock market. IWM Academy delves into the heart of Nasdaq and the New York Stock Exchange, unearthing insights that transform uncertainty into clarity.
+                                    Picture this: you’re not just getting a list of companies to in and out; you’re receiving a treasure map, marked with precise points of opportunity on the volatile seas of the stock market. IWM Academy delves into the heart of US Market and the New York Stock Exchange, unearthing insights that transform uncertainty into clarity.
                                     <br/><br/>
                                     Our mission is to elevate you financially, helping you build a life based not just on survival but thriving. We aim to empower you with deep knowledge of company dynamics, showing you how, when, and why to invest, turning complex decisions into an enlightening journey.
                                     <br/><br/>
