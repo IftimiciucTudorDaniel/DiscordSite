@@ -220,8 +220,9 @@ export const Hero = () => {
                         </div>
                     </div>
                 </div>
+
+                <BenefitsSection/>
             </section>
-            <BenefitsSection/>
             <PricingCards/>
             <Testimonial/>
             <FAQ/>

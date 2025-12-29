@@ -1,4 +1,4 @@
-import { TrendingUp, Users, Clock, DollarSign, BarChart3, Rocket } from 'lucide-react';
+import { TrendingUp, Users, Clock, DollarSign, BarChart3, Rocket, ArrowRight, Infinity } from 'lucide-react';
 
 export default function BenefitsSection() {
     const benefits = [
@@ -40,9 +40,52 @@ export default function BenefitsSection() {
         }
     ];
 
-
     return (
         <div className="w-full max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+            <div className="mb-5 sm:mb-5 flex flex-col items-center gap-6">
+                {/* Lifetime Access Badge */}
+                <div className="group relative">
+                    <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 rounded-full blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
+                    <div className="relative flex items-center gap-3 px-6 py-3 rounded-full bg-black border border-purple-500/30 backdrop-blur-sm">
+                        <Infinity className="w-5 h-5 text-purple-400" />
+                        <span className="text-purple-300 font-semibold text-sm sm:text-base uppercase tracking-wider">
+                            Lifetime Access
+                        </span>
+                        <div className="h-4 w-px bg-purple-500/30"></div>
+                        <span className="text-gray-300 text-xs sm:text-sm">
+                            One-time payment • Learn forever
+                        </span>
+                    </div>
+                </div>
+
+                {/* Main CTA Button */}
+                <a
+                    href="https://course-iwm-academy.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative inline-flex items-center gap-3 px-8 py-4 overflow-hidden rounded-xl transition-all duration-300 hover:scale-105"
+                >
+                    {/* Background gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 opacity-100 transition-opacity duration-300" />
+
+                    {/* Animated gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
+
+                    {/* Button content */}
+                    <span className="relative z-10 text-lg font-semibold text-white">
+                        Get Course Access Now
+                    </span>
+                    <ArrowRight className="relative z-10 w-5 h-5 text-white transition-transform duration-300 group-hover:translate-x-1" />
+
+                    {/* Shine effect */}
+                    <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+                </a>
+
+                {/* Subtext */}
+                <p className="text-gray-400 text-sm text-center">
+                    Join hundreds of traders and investors mastering consistent profits
+                </p>
+            </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
                 {benefits.map((benefit, index) => {
                     const Icon = benefit.icon;
@@ -82,6 +125,9 @@ export default function BenefitsSection() {
                     );
                 })}
             </div>
+
+            {/* CTA Section */}
+
         </div>
     );
 }
